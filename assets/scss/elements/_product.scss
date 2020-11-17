@@ -188,7 +188,7 @@
             right: -1px;
             width: calc(100% + 2px);
             padding: 0 20px 20px;
-            border: 1px solid silver;
+            border: 1px solid red;
             border-top: none;
             @include hidden;
         }
@@ -209,7 +209,7 @@
     }
 
     &:hover {
-        border-color: silver;
+        border-color: red;
 
         .ps-product__thumbnail {
             .ps-product__actions {
