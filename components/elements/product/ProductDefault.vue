@@ -8,7 +8,7 @@
                 />
             </nuxt-link>
             <div v-if="isSale === true" class="ps-product__badge">sale</div>
-            <ul class="ps-product__actions">
+            <!--<ul class="ps-product__actions">
                 <li>
                     <a
                         to="#"
@@ -53,7 +53,7 @@
                         <i class="icon-chart-bars"></i>
                     </a>
                 </li>
-            </ul>
+            </ul>-->
         </div>
         <div class="ps-product__container">
             <nuxt-link to="/shop" class="ps-product__vendor">

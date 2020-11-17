@@ -1,25 +1,11 @@
 <template lang="html">
     <main id="homepage-1">
         <home-banner />
-        <site-feautures-fullwidth />
-        <home-default-deal-of-day
-            v-if="collections !== null"
-            collection-slug="deal-of-the-day"
-        />
-        <home-ads-columns />
-        <home-default-top-categories />
         <template v-if="collections !== null">
             <conumer-electronics collection-slug="consumer-electronics" />
             <clothings collection-slug="clothings" />
-            <garden-and-kitchen collection-slug="garden-and-kitchen" />
         </template>
-        <home-ads />
-        <download-app />
-        <new-arrivals
-            v-if="collections !== null"
-            collection-slug="new-arrivals-products"
-        />
-        <newsletters layout="fullwidth"/>
+        <product-list></product-list>
     </main>
 </template>
 <script>
@@ -42,6 +28,7 @@ import HeaderMobile from '~/components/shared/mobile/HeaderMobile';
 import MobileDrawer from '~/components/shared/mobile/MobileDrawer';
 import HomeDefaultDealOfDay from '~/components/partials/homepage/default/HomeDefaultDealOfDay';
 import DemoPanel from '~/components/shared/DemoPanel';
+import ProductList from '~/components/partials/homepage/default/ProductList';
 
 export default {
     components: {
@@ -62,7 +49,8 @@ export default {
         NewArrivals,
         HomeDefaultTopCategories,
         Clothings,
-        ConumerElectronics
+        ConumerElectronics,
+        ProductList
     },
 
     transition: 'zoom',
