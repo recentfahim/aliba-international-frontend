@@ -1,21 +1,5 @@
 <template lang="html">
     <div class="header__actions">
-        <nuxt-link to="/account/compare">
-            <a class="header__extra">
-                <i class="icon-chart-bars"></i>
-                <span>
-                    <i>{{ compareTotal ? compareTotal : 0 }}</i>
-                </span>
-            </a>
-        </nuxt-link>
-        <nuxt-link to="/account/wishlist">
-            <a class="header__extra">
-                <i class="icon-heart"></i>
-                <span>
-                    <i>{{ wishlistTotal ? wishlistTotal : 0 }}</i>
-                </span>
-            </a>
-        </nuxt-link>
         <mini-cart />
         <header-user-area />
     </div>

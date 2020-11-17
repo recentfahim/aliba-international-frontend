@@ -1,8 +1,8 @@
 {
-    "name": "martfury_vue",
+    "name": "aliba_international",
     "version": "1.3.0",
-    "description": "Martfury - Multi-purpose Ecomerce template with vuejs",
-    "author": "nouthemes",
+    "description": "Aliba International",
+    "author": "Fahim",
     "private": true,
     "scripts": {
         "dev": "nuxt",

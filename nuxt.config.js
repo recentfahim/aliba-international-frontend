@@ -1,7 +1,7 @@
 export default {
     head: {
-        titleTemplate: 'Martfury - Multi-purpose Ecomerce template with vuejs',
-        title: 'Martfury - Multi-purpose Ecomerce template with vuejs',
+        titleTemplate: 'Aliba International',
+        title: 'Aliba International',
         meta: [
             { charset: 'utf-8' },
             {
@@ -12,7 +12,7 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Martfury - Multipurpose Marketplace Vuejs Ecommerce Template'
+                    'Aliba International'
             }
         ],
         link: [
@@ -68,7 +68,7 @@ export default {
     },
 
     server: {
-        port: 4002,
+        port: 4000,
         host: 'localhost'
     }
 };

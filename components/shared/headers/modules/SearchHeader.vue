@@ -4,19 +4,12 @@
         @submit.prevent="handleSubmit"
         v-click-outside="handleClickOutside"
     >
-        <div class="ps-form__categories">
-            <select class="form-control">
-                <option v-for="item in exampleCategories" :value="{ item }">
-                    {{ item }}
-                </option>
-            </select>
-        </div>
         <div class="ps-form__input">
             <input
                 v-model="searchText"
                 class="form-control"
                 type="text"
-                placeholder="I'm shopping for..."
+                placeholder="I'm looking for..."
                 @keyup="handleSearchProduct"
             />
             <v-progress-circular
