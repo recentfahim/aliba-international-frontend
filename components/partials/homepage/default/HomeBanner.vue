@@ -1,18 +1,11 @@
 <template lang="html">
     <div class="ps-home-banner ps-home-banner--1">
         <div class="ps-container">
-            <div class="ps-section__right">
-                <nuxt-link to="/shop" class="ps-collection">
-                    <img
-                        src="/img/slider/home-1/promotion-1.jpg"
-                        alt="aliba"
-                    />
-                </nuxt-link>
-                <nuxt-link to="/shop" class="ps-collection">
-                    <img
-                        src="/img/slider/home-1/promotion-2.jpg"
-                        alt="aliba"
-                    />
+            <div class="ps-section__right pl-5">
+                <nuxt-link to="/shop" class="ps-collection" v-for="category in categories" :key="category.ID">
+                    <div>
+                        {{ category.Name }}
+                    </div>
                 </nuxt-link>
             </div>
             <div class="ps-section__left ml-4">
@@ -62,6 +55,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: 'HomeBanner',
     data() {
@@ -74,10 +69,21 @@ export default {
                     nextEl: '.swiper-next',
                     prevEl: '.swiper-prev'
                 }
-            }
+            },
+            categories: []
         };
+    },
+    mounted(){
+        axios.get(`http://localhost:8000/api/v1/category/`).then((response) => {
+            this.categories = response.data.data
+        })
     }
+
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-section__left{
+    max-height: 425px;
+}
+</style>
