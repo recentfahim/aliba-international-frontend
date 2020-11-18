@@ -1,7 +1,21 @@
 <template lang="html">
     <div class="ps-home-banner ps-home-banner--1">
         <div class="ps-container">
-            <div class="ps-section__left">
+            <div class="ps-section__right">
+                <nuxt-link to="/shop" class="ps-collection">
+                    <img
+                        src="/img/slider/home-1/promotion-1.jpg"
+                        alt="aliba"
+                    />
+                </nuxt-link>
+                <nuxt-link to="/shop" class="ps-collection">
+                    <img
+                        src="/img/slider/home-1/promotion-2.jpg"
+                        alt="aliba"
+                    />
+                </nuxt-link>
+            </div>
+            <div class="ps-section__left ml-4">
                 <div class="ps-carousel" v-swiper:mySwiper="swiperOption">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -42,20 +56,6 @@
                         class="swiper-pagination swiper-pagination-bullets"
                     ></div>
                 </div>
-            </div>
-            <div class="ps-section__right">
-                <nuxt-link to="/shop" class="ps-collection">
-                    <img
-                        src="/img/slider/home-1/promotion-1.jpg"
-                        alt="martfury"
-                    />
-                </nuxt-link>
-                <nuxt-link to="/shop" class="ps-collection">
-                    <img
-                        src="/img/slider/home-1/promotion-2.jpg"
-                        alt="martfury"
-                    />
-                </nuxt-link>
             </div>
         </div>
     </div>

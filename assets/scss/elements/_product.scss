@@ -128,14 +128,14 @@
         line-height: 1.2em;
         padding-bottom: 5px;
         padding-left: 0;
-        color: #06c;
+        color: black;
         --max-lines: 2;
         max-height: calc(1.2em * var(--max-lines));
         overflow: hidden;
         padding-right: 1rem;
 
         &:hover {
-            color: $color-1st;
+            color: red;
         }
     }
 
@@ -225,6 +225,9 @@
                 height: auto;
                 @include show;
             }
+        }
+        .ps-product__title{
+            color: red;
         }
 
         &.ps-product--inner {
