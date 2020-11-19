@@ -58,6 +58,11 @@
                         class="swiper-pagination swiper-pagination-bullets"
                     ></div>
                 </div>
+                <div class="row">
+                    <div class="col-3" v-for="brand in brands">
+                        <img :src="brand.PictureUrl" alt="aliba" @mouseover="brandHover(brand)">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -79,12 +84,16 @@ export default {
                     prevEl: '.swiper-prev'
                 }
             },
-            categories: []
+            categories: [],
+            brands: []
         };
     },
     mounted(){
         axios.get(`http://localhost:8000/api/v1/category/`).then((response) => {
             this.categories = response.data.data
+        })
+        axios.get(`http://localhost:8000/api/v1/brand/`).then((response) => {
+            this.brands = response.data.data
         })
     }
 
