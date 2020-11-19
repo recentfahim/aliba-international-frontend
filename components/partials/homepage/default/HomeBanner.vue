@@ -58,8 +58,8 @@
                         class="swiper-pagination swiper-pagination-bullets"
                     ></div>
                 </div>
-                <div class="row">
-                    <div class="col-3" v-for="brand in brands">
+                <div class="row mt-5">
+                    <div class="col-2 ps-brand-home" v-for="brand in brands">
                         <img :src="brand.PictureUrl" alt="aliba" @mouseover="brandHover(brand)">
                     </div>
                 </div>
@@ -88,11 +88,16 @@ export default {
             brands: []
         };
     },
+    methods:{
+        brandHover(brand){
+            console.log(brand.Name)
+        }
+    },
     mounted(){
-        axios.get(`http://localhost:8000/api/v1/category/`).then((response) => {
+        axios.get(process.env.baseURL + `category/`).then((response) => {
             this.categories = response.data.data
         })
-        axios.get(`http://localhost:8000/api/v1/brand/`).then((response) => {
+        axios.get(process.env.baseURL + `brand/`).then((response) => {
             this.brands = response.data.data
         })
     }
@@ -101,6 +106,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.ps-brand-home{
+    border-right: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+}
+.ps-brand-home:nth-child(6n){
+    border-right: 0;
+}
 .ps-section__left{
     max-height: 425px;
 }
