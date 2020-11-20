@@ -9,7 +9,7 @@
                     <div class="row">
                         <div v-for="product in products"
                              class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6"
-                             :key="product.id">
+                             :key="product.Id">
                             <product-default :product="product" />
                         </div>
                     </div>
@@ -38,9 +38,8 @@ name: "ProductList.vue",
 
     },
     mounted() {
-        axios.get(`${this.baseDomain}/products?_start=1&_limit=50`).then((response) => {
-            console.log(response.data)
-            this.products = response.data
+        axios.get(`${process.env.baseURL}product`).then((response) => {
+            this.products = response.data.data
         })
     }
 }

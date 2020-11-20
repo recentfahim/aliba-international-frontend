@@ -1,100 +1,54 @@
 <template lang="html">
     <div class="ps-product">
         <div class="ps-product__thumbnail">
-            <nuxt-link :to="`/product/${product.id}`">
+            <nuxt-link :to="`/product/${product.Id}`">
                 <img
-                    :src="`${baseUrl}${product.thumbnail.url}`"
+                    :src="product.MainPictureUrl"
                     alt="martfury"
                 />
             </nuxt-link>
-            <div v-if="isSale === true" class="ps-product__badge">sale</div>
-            <!--<ul class="ps-product__actions">
-                <li>
-                    <a
-                        to="#"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Add to cart"
-                        @click.prevent="handleAddToCart"
-                    >
-                        <i class="icon-bag2"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        to="#"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Quick View"
-                        @click.prevent="quickviewDialog = true"
-                    >
-                        <i class="icon-eye"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Add to wishlist"
-                        @click.prevent="handleAddItemToWishlist"
-                    >
-                        <i class="icon-heart"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        to="#"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Compare"
-                        @click.prevent="handleAddItemToCompare"
-                    >
-                        <i class="icon-chart-bars"></i>
-                    </a>
-                </li>
-            </ul>-->
+<!--            <div v-if="product.IsSellAllowed === true" class="ps-product__badge">sale</div>-->
         </div>
         <div class="ps-product__container">
             <nuxt-link to="/shop" class="ps-product__vendor">
-                {{ product.vendor }}
+                {{ product.ProviderType }}
             </nuxt-link>
             <div class="ps-product__content">
                 <nuxt-link
                     :to="`/product/${product.id}`"
                     class="ps-product__title"
                 >
-                    {{ product.title }}
+                    {{ product.Title }}
                 </nuxt-link>
                 <div class="ps-product__rating">
-                    <rating />
-                    <span>{{ product.ratingCount }}</span>
+<!--                    <rating />-->
+<!--                    <span>{{ product.ratingCount }}</span>-->
                 </div>
                 <p
-                    v-if="product.is_sale === true"
+                    v-if="product.IsSellAllowed === true"
                     class="ps-product__price sale"
                 >
-                    {{ currency }}{{ product.price }}
+                    BDT 500
                     <del class="ml-2">
-                        {{ currency }}{{ product.sale_price }}
+                        BDT 500
                     </del>
                 </p>
                 <p v-else class="ps-product__price">
-                    {{ currency }}{{ product.price }}
+                    BDT 500
                 </p>
             </div>
             <div class="ps-product__content hover">
                 <nuxt-link :to="`/product/${product.id}`">
-                    <a class="ps-product__title">{{ product.title }}</a>
+                    <a class="ps-product__title">{{ product.Title }}</a>
                 </nuxt-link>
                 <p
-                    v-if="product.is_sale === true"
+                    v-if="product.IsSellAllowed === true"
                     class="ps-product__price sale"
                 >
-                    ${{ product.price }}
-                    <del class="ml-2"> ${{ product.sale_price }}</del>
+                    BDT 500
+                    <del class="ml-2"> BDT 500</del>
                 </p>
-                <p v-else class="ps-product__price">${{ product.price }}</p>
+                <p v-else class="ps-product__price">BDT 500 }}</p>
             </div>
         </div>
         <v-dialog v-model="quickviewDialog" width="1200">
@@ -118,13 +72,7 @@ import ProductQuickview from '~/components/elements/detail/ProductQuickview';
 
 export default {
     components: { ProductQuickview, Rating },
-    props: {
-        product: {
-            type: Object,
-            require: true,
-            default: () => {}
-        }
-    },
+    props: ['product'],
 
     computed: {
         ...mapState({
@@ -203,6 +151,9 @@ export default {
                 this.$store.commit('cart/setLoading', false);
             }
         }
+    },
+    mounted() {
+        console.log(this.product)
     }
 };
 </script>
