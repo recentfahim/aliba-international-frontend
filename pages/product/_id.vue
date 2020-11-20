@@ -5,7 +5,7 @@
             <div class="ps-container">
                 <div class="ps-page__container">
                     <div class="ps-page__left">
-                        <product-detail-fullwidth v-if="product !== null" />
+                        <product-detail-fullwidth :product="product" v-if="product !== null" />
                     </div>
                     <div class="ps-page__right">
                         <product-widgets
@@ -39,6 +39,8 @@ import RelatedProduct from '~/components/partials/product/RelatedProduct';
 import ProductWidgets from '~/components/partials/product/ProductWidgets';
 import LayoutProduct from '~/layouts/layout-product';
 import Newsletters from '~/components/partials/commons/Newsletters';
+import axios from 'axios';
+
 export default {
     layout: 'layout-product',
     transition: 'zoom',
@@ -55,14 +57,14 @@ export default {
     computed: {
         ...mapState({
             collections: state => state.collection.collections,
-            product: state => state.product.product
         })
     },
     data() {
         return {
             productId: this.$route.params.id,
             breadCrumb: null,
-            pageLoading: true
+            pageLoading: true,
+            product: ''
         };
     },
     async created() {
@@ -100,6 +102,10 @@ export default {
         ];
     },
     mounted() {
+        let product_id = this.$route.params.id
+        axios.get(`${process.env.baseURL}single-product/${product_id}`).then((response) => {
+            this.product = response.data.data
+        })
         this.$store.commit('app/setAppDrawer', false);
     }
 };

@@ -23,6 +23,7 @@ import ModuleProductInfo from '~/components/elements/detail/information/modules/
 
 export default {
     name: 'InformationDefault',
+    props: ['product'],
     components: {
         ModuleProductInfo,
         ModuleProductShopping,
@@ -31,11 +32,6 @@ export default {
         ModuleProductDetailSpecification,
         ModuleProductDetailSharing
     },
-    computed: {
-        ...mapState({
-            product: state => state.product.product
-        })
-    }
 };
 </script>
 

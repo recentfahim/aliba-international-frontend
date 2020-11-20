@@ -43,12 +43,7 @@ import { mapState } from 'vuex';
 
 export default {
     name: 'ModuleProductShopping',
-    props: {
-        product: {
-            type: Object,
-            default: () => {}
-        }
-    },
+    props: ['product'],
     computed: {
         ...mapState({
             cartItems: state => state.cart.cartItems
