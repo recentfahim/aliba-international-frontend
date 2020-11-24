@@ -3,7 +3,7 @@
         <div class="ps-product__thumbnail">
             <nuxt-link :to="`/product/${product.Id}`">
                 <img
-                    :src="product.MainPictureUrl"
+                    :src="product.image"
                     alt="martfury"
                 />
             </nuxt-link>
@@ -18,7 +18,7 @@
                     :to="`/product/${product.id}`"
                     class="ps-product__title"
                 >
-                    {{ product.Title }}
+                    {{ product.title }}
                 </nuxt-link>
                 <div class="ps-product__rating">
 <!--                    <rating />-->
@@ -28,27 +28,27 @@
                     v-if="product.IsSellAllowed === true"
                     class="ps-product__price sale"
                 >
-                    BDT 500
+                    {{ product.price }}
                     <del class="ml-2">
-                        BDT 500
+                        {{ product.price }}
                     </del>
                 </p>
                 <p v-else class="ps-product__price">
-                    BDT 500
+                    {{ product.price }}
                 </p>
             </div>
             <div class="ps-product__content hover">
                 <nuxt-link :to="`/product/${product.id}`">
-                    <a class="ps-product__title">{{ product.Title }}</a>
+                    <a class="ps-product__title">{{ product.title }}</a>
                 </nuxt-link>
                 <p
                     v-if="product.IsSellAllowed === true"
                     class="ps-product__price sale"
                 >
-                    BDT 500
-                    <del class="ml-2"> BDT 500</del>
+                    {{ product.price }}
+                    <del class="ml-2"> {{ product.price }}</del>
                 </p>
-                <p v-else class="ps-product__price">BDT 500 }}</p>
+                <p v-else class="ps-product__price">{{ product.price }}</p>
             </div>
         </div>
         <v-dialog v-model="quickviewDialog" width="1200">
