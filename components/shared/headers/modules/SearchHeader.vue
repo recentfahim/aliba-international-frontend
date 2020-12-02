@@ -4,6 +4,13 @@
         @submit.prevent="handleSubmit"
         v-click-outside="handleClickOutside"
     >
+        <div class="input-group">
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <div class="input-group-append">
+                <span class="input-group-text">$</span>
+                <span class="input-group-text">0.00</span>
+            </div>
+        </div>
         <div class="ps-form__input">
             <input
                 v-model="searchText"
@@ -174,6 +181,13 @@ export default {
             right: 10px;
             z-index: 20;
         }
+        border: 1px solid red;
     }
+}
+.input-group{
+    border: 2px solid red;
+    line-height: 18px;
+    font-size: 13px;
+    border-radius: 5px;
 }
 </style>

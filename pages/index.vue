@@ -1,5 +1,24 @@
 <template lang="html">
     <main id="homepage-1">
+        <div class="container" style="background-color: white; border-radius: 10px; height: 160px;">
+            <div class="row">
+                <div class="col-12">
+                    dadadf
+                    sfsdf
+                    sdf
+                    dsf
+                    sdf
+                    dsf
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <flash-sale></flash-sale>
+        </div>
+        <div class="container mt-5">
+            <h3>More To Love</h3>
+            <product-grid-view></product-grid-view>
+        </div>
         <home-banner />
         <template v-if="collections !== null">
             <conumer-electronics collection-slug="consumer-electronics" />
@@ -29,6 +48,8 @@ import MobileDrawer from '~/components/shared/mobile/MobileDrawer';
 import HomeDefaultDealOfDay from '~/components/partials/homepage/default/HomeDefaultDealOfDay';
 import DemoPanel from '~/components/shared/DemoPanel';
 import ProductList from '~/components/partials/homepage/default/ProductList';
+import ProductGridView from '~/components/product/product-grid-view';
+import FlashSale from '~/components/product/flash-sale';
 
 export default {
     components: {
@@ -50,7 +71,9 @@ export default {
         HomeDefaultTopCategories,
         Clothings,
         ConumerElectronics,
-        ProductList
+        ProductList,
+        ProductGridView,
+        FlashSale
     },
 
     transition: 'zoom',
@@ -74,3 +97,8 @@ export default {
     }
 };
 </script>
+<style scoped>
+#homepage-1{
+    background-color: #f2f2f2;
+}
+</style>

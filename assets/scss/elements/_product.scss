@@ -18,6 +18,9 @@
         background-color: #ea4040;
     }
 }
+.product-border:hover{
+    border: 1px solid red;
+}
 
 .ps-product {
     position: relative;
@@ -188,7 +191,7 @@
             right: -1px;
             width: calc(100% + 2px);
             padding: 0 20px 20px;
-            border: 1px solid red;
+            //border: 1px solid silver;
             border-top: none;
             @include hidden;
         }
@@ -209,7 +212,7 @@
     }
 
     &:hover {
-        border-color: red;
+        //border-color: silver;
 
         .ps-product__thumbnail {
             .ps-product__actions {

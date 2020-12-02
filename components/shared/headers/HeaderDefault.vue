@@ -4,7 +4,7 @@
             <div class="ps-container">
                 <div class="header__left">
                     <nuxt-link to="/" class="ps-logo">
-                        <img src="/img/aliba_logo.jpeg" width="25%" alt="Aliba International" />
+                        <img src="/img/brand/2-1.jpg" width="25%" alt="Aliba International" />
                     </nuxt-link>
                     <div class="menu--product-categories">
                         <div class="menu__toggle">
@@ -51,7 +51,7 @@ export default {
 <style lang="scss" scoped>
 .header--1 {
     .header__top {
-        background-color: $color-1st;
+        background-color: #fff;
     }
 }
 </style>

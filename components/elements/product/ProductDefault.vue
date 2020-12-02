@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="ps-product">
         <div class="ps-product__thumbnail">
-            <nuxt-link :to="`/product/${product.Id}`">
+            <nuxt-link :to="`/product/${product.id}`">
                 <img
                     :src="product.image"
                     alt="martfury"
