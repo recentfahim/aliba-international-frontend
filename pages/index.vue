@@ -16,6 +16,9 @@
             <flash-sale></flash-sale>
         </div>
         <div class="container mt-5">
+            <top-ranking></top-ranking>
+        </div>
+        <div class="container mt-5">
             <h3>More To Love</h3>
             <product-grid-view></product-grid-view>
         </div>
@@ -50,6 +53,7 @@ import DemoPanel from '~/components/shared/DemoPanel';
 import ProductList from '~/components/partials/homepage/default/ProductList';
 import ProductGridView from '~/components/product/product-grid-view';
 import FlashSale from '~/components/product/flash-sale';
+import TopRanking from '~/components/product/TopRanking';
 
 export default {
     components: {
@@ -73,7 +77,8 @@ export default {
         ConumerElectronics,
         ProductList,
         ProductGridView,
-        FlashSale
+        FlashSale,
+        TopRanking
     },
 
     transition: 'zoom',
