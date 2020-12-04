@@ -51,7 +51,6 @@ export default {
         '@nuxtjs/vuetify',
         '@nuxtjs/style-resources',
         'cookie-universal-nuxt',
-        '@nuxtjs/fontawesome'
     ],
     fontawesome: {
         icons: {
