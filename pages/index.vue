@@ -7,6 +7,9 @@
             <top-ranking></top-ranking>
         </div>
         <div class="container mt-5">
+            <TopSelection></TopSelection>
+        </div>
+        <div class="container mt-5">
             <h3>More To Love</h3>
             <product-grid-view></product-grid-view>
         </div>    
@@ -18,13 +21,15 @@ import ProductList from '~/components/partials/homepage/default/ProductList';
 import ProductGridView from '~/components/product/product-grid-view';
 import FlashSale from '~/components/product/flash-sale';
 import TopRanking from '~/components/product/TopRanking';
+import TopSelection from '~/components/product/TopSelection';
 
 export default {
     components: {
         ProductList,
         ProductGridView,
         FlashSale,
-        TopRanking
+        TopRanking,
+        TopSelection
     },
     transition: 'zoom',
     layout: 'layout-default',

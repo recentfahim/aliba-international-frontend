@@ -9,7 +9,6 @@
                     <h3>Top Ranking</h3>
                     <span class="view-more">View more</span>
                 </div>
-
             </div>
             <div class="product-container">
                 <top-ranking-product-container-list></top-ranking-product-container-list>
