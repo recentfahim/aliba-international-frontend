@@ -1,49 +1,33 @@
 <template>
-    <div class="ranking-list pb-3">
-        <v-row class="pt-3">
-            <v-col md="8">
-                <div class="ranking-item">
-                            <span class="ranking-item-title">
-                                {{ title }}
-                            </span>
-                    <br>
-                    <span class="ranking-item-sold-count">
-                                488371 interested
-                            </span>
-                </div>
-            </v-col>
-            <v-col md="4">
-                <div class="ranking-item-badge">
-                            <span class="ranking-item-badge-text">
-                                Top Picks
-                            </span>
-                </div>
-            </v-col>
-        </v-row>
-        <v-row class="m-0">
-            <v-col md="4">
-                <top-ranking-product></top-ranking-product>
-            </v-col>
-            <v-col md="4">
-                <top-ranking-product></top-ranking-product>
-            </v-col>
-            <v-col md="4">
-                <top-ranking-product></top-ranking-product>
-            </v-col>
-        </v-row>
-    </div>
+    <v-row>
+        <v-col md="4">
+            <TopRankingProductContainer :title="title1"></TopRankingProductContainer>
+        </v-col>
+        <v-col md="4">
+            <TopRankingProductContainer :title="title2"></TopRankingProductContainer>
+        </v-col>
+        <v-col md="4">
+            <TopRankingProductContainer :title="title3"></TopRankingProductContainer>
+        </v-col>
+    </v-row>
 </template>
 
 <script>
-import TopRankingProduct from '~/components/product/TopRankingProduct';
+import TopRankingProductContainer from '~/components/product/TopRankingProductContainer';
 
 export default {
-    name: 'TopRankingProductContainer',
-    props: ['title'],
+    name: "TopRankingProductContainerList",
     components: {
-        TopRankingProduct
+        TopRankingProductContainer
+    },
+    data() {
+        return {
+            title1: 'Head Phones',
+            title2: 'Ear Phones',
+            title3: 'Dust Proof'
+        }
     }
-};
+}
 </script>
 
 <style scoped>

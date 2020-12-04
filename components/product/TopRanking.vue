@@ -12,7 +12,7 @@
 
             </div>
             <div class="product-container">
-                <top-ranking-product-container></top-ranking-product-container>
+                <top-ranking-product-container-list></top-ranking-product-container-list>
             </div>
         </v-col>
     </v-row>
@@ -20,20 +20,20 @@
 
 <script>
 import FlashSaleProduct from '~/components/product/flash-sale-product';
-import TopRankingProductContainer from '~/components/product/TopRankingProductContainer';
+import TopRankingProductContainerList from '~/components/product/TopRankingProductContainerList';
 
 export default {
     name: "TopRanking",
     components: {
         FlashSaleProduct,
-        TopRankingProductContainer
+        TopRankingProductContainerList
     }
 }
 </script>
 
 <style scoped>
 .top-ranking-sale{
-    height: 300px;
+    height: 250px;
     background-color: #ffffff;
     border-radius: 10px;
 }
@@ -74,5 +74,8 @@ export default {
     font-size: 16px;
     font-weight: 900;
     font-family: OpenSans,Open Sans,Arial,Helvetica,sans-serif,SimSun,宋体;
+}
+.product-container{
+    margin: 0 -4px;
 }
 </style>

@@ -1,18 +1,6 @@
 <template lang="html">
     <main id="homepage-1">
-        <div class="container" style="background-color: white; border-radius: 10px; height: 160px;">
-            <div class="row">
-                <div class="col-12">
-                    dadadf
-                    sfsdf
-                    sdf
-                    dsf
-                    sdf
-                    dsf
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5">
+        <div class="container pt-5">
             <flash-sale></flash-sale>
         </div>
         <div class="container mt-5">
@@ -21,13 +9,7 @@
         <div class="container mt-5">
             <h3>More To Love</h3>
             <product-grid-view></product-grid-view>
-        </div>
-        <home-banner />
-        <template v-if="collections !== null">
-            <conumer-electronics collection-slug="consumer-electronics" />
-            <clothings collection-slug="clothings" />
-        </template>
-        <product-list></product-list>
+        </div>    
     </main>
 </template>
 <script>
