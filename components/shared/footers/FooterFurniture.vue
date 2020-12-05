@@ -142,47 +142,12 @@
                 </div>
             </div>
             <div class="ps-footer__copyright">
-                <p>© 2020 Martfury. All Rights Reserved</p>
+                <p>© 2020 Aliba International. All Rights Reserved</p>
                 <p>
                     <span>We Using Safe Payment For:</span>
                     <nuxt-link to="/page/blank">
-                        <a>
-                            <img
-                                src="~/static/img/payment-method/1.jpg"
-                                alt="martfury"
-                            />
-                        </a>
-                    </nuxt-link>
-                    <nuxt-link to="/page/blank">
-                        <a>
-                            <img
-                                src="~/static/img/payment-method/2.jpg"
-                                alt="martfury"
-                            />
-                        </a>
-                    </nuxt-link>
-                    <nuxt-link to="/page/blank">
-                        <a>
-                            <img
-                                src="~/static/img/payment-method/3.jpg"
-                                alt="martfury"
-                            />
-                        </a>
-                    </nuxt-link>
-                    <nuxt-link to="/page/blank">
-                        <a>
-                            <img
-                                src="~/static/img/payment-method/4.jpg"
-                                alt="martfury"
-                            />
-                        </a>
-                    </nuxt-link>
-                    <nuxt-link to="/page/blank">
-                        <a>
-                            <img
-                                src="~/static/img/payment-method/5.jpg"
-                                alt="martfury"
-                            />
+                        <a href="#">
+                            <img src="~/static/img/payment-method/ecom-payment.png" alt="" />
                         </a>
                     </nuxt-link>
                 </p>

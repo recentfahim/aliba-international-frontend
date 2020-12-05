@@ -7,49 +7,12 @@
         <div class="input-group">
             <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
             <div class="input-group-append">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
-            </div>
-        </div>
-        <div class="ps-form__input">
-            <input
-                v-model="searchText"
-                class="form-control"
-                type="text"
-                placeholder="I'm looking for..."
-                @keyup="handleSearchProduct"
-            />
-            <v-progress-circular
-                v-if="isLoading"
-                indeterminate
-                color="#fcb800"
-                width="2"
-                size="16"
-            />
-        </div>
-
-        <button>{{ $t('menu.navigationList.search') }}</button>
-        <div
-            :class="
-                `ps-panel--search-result ${
-                    isSearching === true && isLoading === false ? 'active' : ''
-                }`
-            "
-        >
-            <div class="ps-panel__content">
-                <template v-if="searchResults && searchResults.length > 0">
-                    <product-result
-                        v-for="product in searchResults"
-                        :product="product"
-                        :key="product.id"
-                    />
-                </template>
-                <span>Not found! Try with another keyword.</span>
-            </div>
-            <div class="ps-panel__footer text-center">
-                <nuxt-link to="/search">
-                    See all results
-                </nuxt-link>
+                <span class="input-group-text image-search-container">
+                    <i class="fas fa-camera image-search"></i>
+                </span>
+                <span class="input-group-text search-button-container">
+                    <i class="fas fa-search search-button"></i>
+                </span>
             </div>
         </div>
     </form>
@@ -185,9 +148,35 @@ export default {
     }
 }
 .input-group{
-    border: 2px solid red;
+    border: 2px solid #ff4747;
     line-height: 18px;
     font-size: 13px;
     border-radius: 5px;
+}
+.search-button-container{
+    margin-right: -2px;
+    width: 50px;
+    height: 42px;
+    background-color: #ff4747;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+.search-button{
+    font-size: 17px;
+    margin-left: 7px;
+}
+.image-search{
+    font-size: 17px;
+    vertical-align: middle;
+    color: #ffffff;
+    padding: 7px;
+    background: #ff4747;
+    border-radius: 50% !important;
+    cursor: pointer;
+}
+.image-search-container{
+    background-color: #ffffff;
 }
 </style>

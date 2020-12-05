@@ -1,8 +1,6 @@
 <template lang="html">
-    <footer class="ps-footer">
+    <footer class="ps-footer p-0">
         <div class="ps-container">
-            <FooterWidgets />
-            <FooterLinks />
             <FooterCopyright />
         </div>
     </footer>

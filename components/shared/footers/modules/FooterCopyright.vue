@@ -1,24 +1,12 @@
 <template lang="html">
     <div class="ps-footer__copyright">
-        <p v-html="$t('footer.copyright')">
-
+        <p class="mt-5">
+            <span>© 2020 Aliba International. All Rights Reserved</span>
         </p>
         <p>
             <span>We Using Safe Payment For:</span>
             <a href="#">
-                <img src="~/static/img/payment-method/1.jpg" alt="" />
-            </a>
-            <a href="#">
-                <img src="~/static/img/payment-method/2.jpg" alt="" />
-            </a>
-            <a href="#">
-                <img src="~/static/img/payment-method/3.jpg" alt="" />
-            </a>
-            <a href="#">
-                <img src="~/static/img/payment-method/4.jpg" alt="" />
-            </a>
-            <a href="#">
-                <img src="~/static/img/payment-method/5.jpg" alt="" />
+                <img src="~/static/img/payment-method/ecom-payment.png" alt="" />
             </a>
         </p></div
 ></template>
