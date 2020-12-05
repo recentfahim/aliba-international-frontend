@@ -1,7 +1,6 @@
 <template lang="html">
     <div class="header__actions">
         <mini-cart />
-        <header-user-area />
     </div>
 </template>
 
