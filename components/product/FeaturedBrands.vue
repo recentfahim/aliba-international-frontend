@@ -30,13 +30,15 @@
 
 <script>
 import FeaturedBrandsItem from '~/components/product/FeaturedBrandsItem';
+import StoresYouWillLove from '~/components/product/StoresYouWillLove/StoresYouWillLove';
 
 
 
     export default {
     name: "FeaturedBrands",
     components: {
-        FeaturedBrandsItem
+        FeaturedBrandsItem,
+        StoresYouWillLove
     }
 
 }
