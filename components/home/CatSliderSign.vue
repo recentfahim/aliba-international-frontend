@@ -5,7 +5,7 @@
                 asdasdasd
             </v-col>
             <v-col md="6">
-                asdasd
+                <HomeSlider></HomeSlider>
             </v-col>
             <v-col md="3">
                 <div class="sign-in-up-container">
@@ -35,8 +35,12 @@
 </template>
 
 <script>
+import HomeSlider from '~/components/home/HomeSlider';
 export default {
-name: "CatSliderSign"
+    name: "CatSliderSign",
+    components: {
+        HomeSlider
+    }
 }
 </script>
 
@@ -44,7 +48,6 @@ name: "CatSliderSign"
 .sign-in-up-container{
     background: rgb(255, 245, 245);
     height: 300px;
-    margin: 10px;
     border-radius: 10px;
     text-align: center;
 }
