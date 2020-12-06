@@ -30,7 +30,7 @@ name: "SignInSignUp"
 <style scoped>
 .sign-in-up-container{
     background: rgb(255, 245, 245);
-    height: 300px;
+    height: 275px;
     border-radius: 10px;
     text-align: center;
 }
