@@ -2,7 +2,7 @@
     <div>
         <v-row>
             <v-col md="3">
-                asdasdasd
+                <Category></Category>
             </v-col>
             <v-col md="6">
                 <HomeSlider></HomeSlider>
@@ -18,12 +18,14 @@
 <script>
 import HomeSlider from '~/components/home/HomeSlider';
 import SignInSignUp from '~/components/home/SignInSignUp';
+import Category from '~/components/home/Category';
 
 export default {
     name: "CatSliderSign",
     components: {
         HomeSlider,
-        SignInSignUp
+        SignInSignUp,
+        Category
     }
 }
 </script>
