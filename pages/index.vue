@@ -1,6 +1,9 @@
 <template lang="html">
     <main id="homepage-1">
         <div class="container pt-5">
+            <CatSliderSign></CatSliderSign>
+        </div>
+        <div class="container mt-5">
             <flash-sale></flash-sale>
         </div>
         <div class="container mt-5">
@@ -28,6 +31,7 @@ import ProductGridView from '~/components/product/product-grid-view';
 import FlashSale from '~/components/product/flash-sale';
 import TopRanking from '~/components/product/TopRanking';
 import TopSelection from '~/components/product/TopSelection';
+import CatSliderSign from '~/components/home/CatSliderSign';
 import FeaturedBrands from '~/components/product/FeaturedBrands';
 // import StoresYouWillLove from '~/components/product/StoresYouWillLove';
 
@@ -38,8 +42,8 @@ export default {
         FlashSale,
         TopRanking,
         TopSelection,
-        FeaturedBrands,
-        // StoresYouWillLove
+        CatSliderSign,
+        FeaturedBrands
     },
     transition: 'zoom',
     layout: 'layout-default',
