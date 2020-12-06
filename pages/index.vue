@@ -10,6 +10,12 @@
             <TopSelection></TopSelection>
         </div>
         <div class="container mt-5">
+            <FeaturedBrands></FeaturedBrands>
+        </div>
+         <!-- <div class="container mt-5">
+            <StoresYouWillLove></StoresYouWillLove>
+        </div> -->
+        <div class="container mt-5">
             <h3>More To Love</h3>
             <product-grid-view></product-grid-view>
         </div>    
@@ -22,6 +28,8 @@ import ProductGridView from '~/components/product/product-grid-view';
 import FlashSale from '~/components/product/flash-sale';
 import TopRanking from '~/components/product/TopRanking';
 import TopSelection from '~/components/product/TopSelection';
+import FeaturedBrands from '~/components/product/FeaturedBrands';
+// import StoresYouWillLove from '~/components/product/StoresYouWillLove';
 
 export default {
     components: {
@@ -29,7 +37,9 @@ export default {
         ProductGridView,
         FlashSale,
         TopRanking,
-        TopSelection
+        TopSelection,
+        FeaturedBrands,
+        // StoresYouWillLove
     },
     transition: 'zoom',
     layout: 'layout-default',
