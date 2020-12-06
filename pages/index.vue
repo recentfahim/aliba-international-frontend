@@ -13,6 +13,12 @@
             <TopSelection></TopSelection>
         </div>
         <div class="container mt-5">
+            <FeaturedBrands></FeaturedBrands>
+        </div>
+         <!-- <div class="container mt-5">
+            <StoresYouWillLove></StoresYouWillLove>
+        </div> -->
+        <div class="container mt-5">
             <h3>More To Love</h3>
             <product-grid-view></product-grid-view>
         </div>    
@@ -26,6 +32,8 @@ import FlashSale from '~/components/product/flash-sale';
 import TopRanking from '~/components/product/TopRanking';
 import TopSelection from '~/components/product/TopSelection';
 import CatSliderSign from '~/components/home/CatSliderSign';
+import FeaturedBrands from '~/components/product/FeaturedBrands';
+// import StoresYouWillLove from '~/components/product/StoresYouWillLove';
 
 export default {
     components: {
@@ -34,7 +42,8 @@ export default {
         FlashSale,
         TopRanking,
         TopSelection,
-        CatSliderSign
+        CatSliderSign,
+        FeaturedBrands
     },
     transition: 'zoom',
     layout: 'layout-default',
