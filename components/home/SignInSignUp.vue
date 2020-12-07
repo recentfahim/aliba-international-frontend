@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div class="sign-in-up-container">
         <div>
             <div class="user-icon">
@@ -10,20 +11,86 @@
             <div class="button-container mt-6">
                 <v-row>
                     <v-col md="6">
-                        <button class="btn btn-join">Join</button>
+                        <button class="btn btn-join" @click="showLoginPopup">Join</button>
                     </v-col>
                     <v-col md="6">
-                        <button class="btn btn-sign-in">Sign In</button>
+                        <button class="btn btn-sign-in" @click="showLoginPopup">Sign In</button>
                     </v-col>
                 </v-row>
             </div>
         </div>
     </div>
+    <div class="clearfix"></div>
+
+    <!--- Login SignUp popup -->
+    <vodal :show="show" animation="rotate" @hide="show = false" height="450">
+        <div>
+            <div class="text-center">
+                <img src="/img/aliba_logo.jpeg" width="25%" alt="Aliba International" />
+            </div>
+            <div class="mt-3">
+                <v-tabs v-model="tab" align-with-title centered>
+                    <v-tabs-slider color="red"></v-tabs-slider>
+
+                    <v-tab href="#signin">
+                       Sign In
+                    </v-tab>
+
+                    <v-tab href="#join">
+                       Join
+                    </v-tab>
+
+                    <v-tab-item key="signin" id="signin" class="mt-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-sm" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="button-sign w-100">Sign In</button>
+                        </div>
+
+                    </v-tab-item>
+                    <v-tab-item key="join" id="join" class="mt-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-sm" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-sm" placeholder="Confirm Password">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="button-sign w-100">Create Account</button>
+                        </div>
+                    </v-tab-item>
+                </v-tabs>
+            </div>
+
+        </div>
+    </vodal>
+    </div>
 </template>
 
 <script>
+import vodal from 'vodal';
 export default {
-name: "SignInSignUp"
+    name: "SignInSignUp",
+    components: {
+        vodal
+    },
+    data(){
+        return{
+            show: false
+        }
+    },
+    methods: {
+        showLoginPopup(){
+            this.show = true;
+        }
+    }
 }
 </script>
 
@@ -80,5 +147,17 @@ name: "SignInSignUp"
 }
 .btn-sign-in:hover{
     background-color: #00c64f;
+}
+input{
+    border-radius: 5px;
+}
+.button-sign{
+    height: 50px;
+    background-color: #ff4747;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 </style>

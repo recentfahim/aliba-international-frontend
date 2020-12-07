@@ -36,7 +36,9 @@ export default {
         '~/static/fonts/font-awesome/css/font-awesome.css',
         '~/static/css/bootstrap.min.css',
         '~/assets/scss/style.scss',
-        'hooper/dist/hooper.css'
+        'hooper/dist/hooper.css',
+        'vodal/common.css',
+        'vodal/rotate.css'
     ],
 
     plugins: [
