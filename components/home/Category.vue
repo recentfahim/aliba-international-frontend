@@ -1,17 +1,14 @@
 <template>
     <div class="category-container">
         <ul class="category-list">
-            <li class="category-item">
+            <li class="category-item" v-for="category in categories" @mouseenter="getSubCategory(category.Id)">
                 <div class="d-flex">
-                    <div class="category-item-icon">
-                        <i class="fas fa-female"></i>
-                    </div>
-                    <div class="category-item-text">
-                        Women's Fashion
+                    <div class="category-item-text ml-2">
+                        {{ category.Name }}
                     </div>
                 </div>
             </li>
-            <li class="category-item">
+<!--            <li class="category-item">
                 <div class="d-flex">
                     <div class="category-item-icon">
                         <i class="fas fa-tshirt"></i>
@@ -130,14 +127,37 @@
                         Home Improvement &amp; Tools
                     </div>
                 </div>
-            </li>
+            </li>-->
         </ul>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    name: 'Category'
+    name: 'Category',
+
+    data() {
+        return{
+            categories: [],
+            sub_categories: []
+        }
+    },
+
+    methods: {
+      getSubCategory(data){
+          axios.get(process.env.baseURL + `sub-category/`+ data).then((response) => {
+              this.sub_categories = response.data.data
+          })
+      }
+    },
+
+    created() {
+        axios.get(process.env.baseURL + `category`).then((response) => {
+            this.categories = response.data.data
+        })
+    }
 };
 </script>
 
