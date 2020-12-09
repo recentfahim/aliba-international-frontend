@@ -44,18 +44,7 @@
               <SignIn :show_login_popup="show_login_popup"></SignIn>
             </v-tab-item>
             <v-tab-item key="join" id="join" class="mt-4">
-              <div class="form-group">
-                <input type="text" class="form-control form-control-sm" placeholder="Username">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control form-control-sm" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control form-control-sm" placeholder="Confirm Password">
-              </div>
-              <div class="form-group">
-                <button type="button" class="button-sign w-100">Create Account</button>
-              </div>
+              <SignUp></SignUp>
             </v-tab-item>
           </v-tabs>
         </div>
@@ -70,12 +59,14 @@ import vodal from 'vodal';
 import { required } from 'vuelidate/lib/validators';
 import axios from 'axios';
 import SignIn from '~/components/home/account/SignIn';
+import SignUp from '~/components/home/account/SignUp';
 
 export default {
   name: 'SignInSignUp',
   components: {
     vodal,
-    SignIn
+    SignIn,
+    SignUp
   },
 
   data() {
@@ -156,15 +147,5 @@ export default {
 
 input {
   border-radius: 5px;
-}
-
-.button-sign {
-  height: 50px;
-  background-color: #ff4747;
-  font-size: 20px;
-  font-weight: 600;
-  border-radius: 5px;
-  color: #ffffff;
-  text-transform: uppercase;
 }
 </style>

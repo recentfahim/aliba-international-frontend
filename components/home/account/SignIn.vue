@@ -94,5 +94,13 @@ export default {
 </script>
 
 <style scoped>
-
+.button-sign {
+  height: 50px;
+  background-color: #ff4747;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
 </style>
