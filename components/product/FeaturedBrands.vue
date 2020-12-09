@@ -21,7 +21,7 @@
                 </v-row>    
             </div>    
         </v-col>
-        <v-col md="6" class="pr-0">
+        <v-col md="6" class="pr-0" >
             <StoresYouWillLove></StoresYouWillLove>
         </v-col>  
     </v-row>
@@ -114,8 +114,9 @@ import StoresYouWillLove from '~/components/product/StoresYouWillLove/StoresYouW
 }
 .featured-brands-icon i{
     font-size: 18px;
-    font-size: 18px;
+    /* font-size: 18px; */
     padding: 6px 0px 0px 6px;
 
 }
+
 </style>
