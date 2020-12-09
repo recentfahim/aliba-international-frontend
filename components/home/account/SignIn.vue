@@ -76,6 +76,14 @@ export default {
               'password': this.password
             }).then((response) => {
           if (response.data.message) {
+            this.$notify(
+                {
+                  group: 'addCartSuccess',
+                  type: 'warn',
+                  title: 'Error!',
+                  text: `Wrong Credentials`
+                }
+            )
             console.log(response.data.message);
             return;
           } else {

@@ -104,27 +104,45 @@ export default {
   },
   methods: {
     handleSubmit() {
-      this.$v.$touch();
-      if (!this.$v.$invalid) {
-        axios.post(`http://127.0.0.1:8000/api/register`,
+      if(this.password === this.confirm_password) {
+        this.$v.$touch();
+        if (!this.$v.$invalid) {
+          axios.post(`http://127.0.0.1:8000/api/register`,
+              {
+                'name': this.user_name,
+                'email': this.email,
+                'password': this.password,
+                'password_confirmation': this.confirm_password
+              }).then((response) => {
+            if (response.data.message) {
+              this.$notify(
+                  {
+                    group: 'addCartSuccess',
+                    type: 'warn',
+                    title: 'Error!',
+                    text: response.data.message.message
+                  }
+              )
+              return;
+            } else {
+              localStorage.setItem('auth_user', JSON.stringify(response.data))
+              localStorage.setItem('token', response.data.access_token)
+              this.$store.dispatch('auth/setAuthStatus', true);
+              this.show_login_popup = false
+              this.$router.push('/');
+            }
+          });
+        }
+      }
+      else{
+        this.$notify(
             {
-              'name': this.user_name,
-              'email': this.email,
-              'password': this.password,
-              'password_confirmation': this.confirm_password
-            }).then((response) => {
-          if (response.data.message) {
-            console.log(response.data.message);
-            return;
-          } else {
-            localStorage.setItem('auth_user', JSON.stringify(response.data))
-            localStorage.setItem('token', response.data.access_token)
-            this.$store.dispatch('auth/setAuthStatus', true);
-            this.show_login_popup = false
-            this.$router.push('/');
-          }
-        });
-
+              group: 'addCartSuccess',
+              type: 'warn',
+              title: 'Error!',
+              text: `Password did not match`
+            }
+        )
       }
     }
   }
