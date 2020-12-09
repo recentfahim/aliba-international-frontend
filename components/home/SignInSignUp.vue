@@ -23,13 +23,13 @@
     <div class="clearfix"></div>
 
     <!--- Login SignUp popup -->
-    <vodal :show="show" animation="rotate" @hide="show = false" height=450>
+    <vodal :show="show" animation="rotate" @hide="show = false" :height="550">
       <div>
         <div class="text-center">
           <img src="/img/aliba_logo.jpeg" width="25%" alt="Aliba International" />
         </div>
         <div class="mt-3">
-          <v-tabs v-model="tab" align-with-title centered>
+          <v-tabs centered>
             <v-tabs-slider color="red"></v-tabs-slider>
 
             <v-tab href="#signin">
