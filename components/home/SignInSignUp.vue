@@ -23,7 +23,7 @@
     <div class="clearfix"></div>
 
     <!--- Login SignUp popup -->
-    <vodal :show="show" animation="rotate" @hide="show = false" :height="550">
+    <vodal :show="show_login_popup" animation="rotate" @hide="show_login_popup = false" :height="550">
       <div>
         <div class="text-center">
           <img src="/img/aliba_logo.jpeg" width="25%" alt="Aliba International" />
@@ -41,64 +41,9 @@
             </v-tab>
 
             <v-tab-item key="signin" id="signin" class="mt-4">
-              <div class="form-group mb-0">
-                  <v-text-field
-                      v-model="username"
-                      class="ps-text-field"
-                      :error-messages="usernameErrors"
-                      @input="$v.username.$touch()"
-                      placeholder="Email"
-                      height="50"
-                      outlined
-                  />
-              </div>
-              <div class="form-group mb-0">
-                <v-text-field
-                    v-model="password"
-                    type="password"
-                    class="ps-text-field"
-                    :error-messages="passwordErrors"
-                    @input="$v.password.$touch()"
-                    placeholder="Password"
-                    height="50"
-                    outlined
-                />
-              </div>
-              <div class="form-group submit">
-                <button
-                    type="submit"
-                    class="ps-btn ps-btn--fullwidth button-sign w-100"
-                    @click.prevent="handleSubmit"
-                >
-                  Sign In
-                </button>
-              </div>
-
+              <SignIn :show_login_popup="show_login_popup"></SignIn>
             </v-tab-item>
             <v-tab-item key="join" id="join" class="mt-4">
-              <div class="form-group mb-0">
-                <v-text-field
-                    v-model="username"
-                    class="ps-text-field"
-                    :error-messages="usernameErrors"
-                    @input="$v.username.$touch()"
-                    placeholder="Email"
-                    height="50"
-                    outlined
-                />
-              </div>
-              <div class="form-group mb-0">
-                <v-text-field
-                    v-model="password"
-                    type="password"
-                    class="ps-text-field"
-                    :error-messages="passwordErrors"
-                    @input="$v.password.$touch()"
-                    placeholder="Password"
-                    height="50"
-                    outlined
-                />
-              </div>
               <div class="form-group">
                 <input type="text" class="form-control form-control-sm" placeholder="Username">
               </div>
@@ -124,64 +69,24 @@
 import vodal from 'vodal';
 import { required } from 'vuelidate/lib/validators';
 import axios from 'axios';
+import SignIn from '~/components/home/account/SignIn';
 
 export default {
   name: 'SignInSignUp',
   components: {
-    vodal
-  },
-  data() {
-    return {
-      show: false,
-      username: null,
-      password: null
-    };
-  },
-  computed: {
-    usernameErrors() {
-      const errors = [];
-      if (!this.$v.username.$dirty) return errors;
-      !this.$v.username.required && errors.push('This field is required');
-      return errors;
-    },
-    passwordErrors() {
-      const errors = [];
-      if (!this.$v.password.$dirty) return errors;
-      !this.$v.password.required && errors.push('This field is required');
-      return errors;
-    }
+    vodal,
+    SignIn
   },
 
-  validations: {
-    username: { required },
-    password: { required }
+  data() {
+    return {
+      show_login_popup: false,
+    };
   },
 
   methods: {
     showLoginPopup() {
-      this.show = true;
-    },
-    handleSubmit() {
-      this.$v.$touch();
-      if (!this.$v.$invalid) {
-        axios.post(`http://127.0.0.1:8000/api/login`,
-            {
-              'email': this.username,
-              'password': this.password
-            }).then((response) => {
-          if (response.data.message) {
-            console.log(response.data.message);
-            return;
-          } else {
-            localStorage.setItem('auth_user', JSON.stringify(response.data))
-            localStorage.setItem('token', response.data.token)
-            this.$store.dispatch('auth/setAuthStatus', true);
-            this.show = false
-            this.$router.push('/');
-          }
-        });
-
-      }
+      this.show_login_popup = true;
     }
   }
 };
