@@ -107,7 +107,7 @@ export default {
       if(this.password === this.confirm_password) {
         this.$v.$touch();
         if (!this.$v.$invalid) {
-          axios.post(`http://127.0.0.1:8000/api/register`,
+          axios.post(process.env.baseURL + `register`,
               {
                 'name': this.user_name,
                 'email': this.email,

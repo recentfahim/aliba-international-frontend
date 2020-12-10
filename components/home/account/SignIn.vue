@@ -70,7 +70,7 @@ export default {
     handleSubmit() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
-        axios.post(`http://127.0.0.1:8000/api/login`,
+        axios.post(process.env.baseURL + `login`,
             {
               'email': this.username,
               'password': this.password
