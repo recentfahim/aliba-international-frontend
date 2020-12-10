@@ -13,10 +13,7 @@
             </div>
             <div class="product-container">
                 <v-row>
-                    <flash-sale-product></flash-sale-product>
-                    <flash-sale-product></flash-sale-product>
-                    <flash-sale-product></flash-sale-product>
-                    <flash-sale-product></flash-sale-product>
+                    <flash-sale-product v-for="(product, index) in flash_sale_products" :product="product" :key="index"></flash-sale-product>
                 </v-row>
             </div>
         </v-col>
@@ -25,11 +22,24 @@
 
 <script>
 import FlashSaleProduct from '~/components/product/flash-sale-product'
+import axios from 'axios';
 
 export default {
     name: 'flash-sale',
     components: {
         FlashSaleProduct
+    },
+
+    data(){
+      return{
+        flash_sale_products: null,
+      }
+    },
+
+    created() {
+      axios.get(process.env.baseURL + `home-product`).then((response) => {
+          this.flash_sale_products = response.data.data
+      })
     }
 };
 </script>

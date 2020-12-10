@@ -2,12 +2,11 @@
     <v-col md="3">
         <div class="product-grid">
             <div >
-                <img class="product-image" src="https://ae01.alicdn.com/kf/H5a564bdcec0346ae888c5cb5389ad76dO.jpg_350x350xz.jpg">
-                <!--            <img class="product-image" src="https://ae01.alicdn.com/kf/H73f804fdf9d4403182ec701c146d7628R.jpg_200x200.jpg">-->
+                <img class="product-image" :src="product.image">
             </div>
             <div class="product-price">
                 <span class="current-price">
-                    BDT 305.68
+                    BDT {{ this.product.price }}
                 </span>
                 <span class="discount">
                     20% off
@@ -19,7 +18,8 @@
 
 <script>
 export default {
-name: "flash-sale-product"
+  name: "flash-sale-product",
+  props: ['product']
 }
 </script>
 
@@ -45,6 +45,7 @@ name: "flash-sale-product"
     display: flex;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
 }
 .product-image{
     margin: 0;
@@ -64,6 +65,7 @@ name: "flash-sale-product"
     text-align: center;
     font-style: normal;
     margin-left: 115px;
+    white-space: nowrap;
 }
 .current-price {
     float: left;
@@ -74,5 +76,6 @@ name: "flash-sale-product"
     font-weight: 900;
     font-style: italic;
     font-family: OpenSans,Open Sans,Arial,Helvetica,sans-serif,SimSun,宋体;
+    white-space: nowrap;
 }
 </style>
