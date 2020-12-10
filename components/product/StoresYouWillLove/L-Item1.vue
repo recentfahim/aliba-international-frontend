@@ -24,6 +24,6 @@ export default {
 
 <style scoped>
 .product-image{
-padding-left: 7px;
+padding: 8px;
 }
 </style>
