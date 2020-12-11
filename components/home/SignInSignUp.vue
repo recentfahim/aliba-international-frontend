@@ -5,16 +5,26 @@
         <div class="user-icon">
           <i class="fas fa-user-circle"></i>
         </div>
-        <div class="welcome">
+        <div class="welcome" v-if="!isLoggedIn">
           Welcome To Aliba International
         </div>
-        <div class="button-container mt-6">
+        <div v-else class="welcome">
+          Hi, {{ user.name }}
+        </div>
+        <div class="button-container mt-6" v-if="!isLoggedIn">
           <v-row>
             <v-col md="6">
               <button class="btn btn-join" @click="showLoginPopup">Join</button>
             </v-col>
             <v-col md="6">
               <button class="btn btn-sign-in" @click="showLoginPopup">Sign In</button>
+            </v-col>
+          </v-row>
+        </div>
+        <div class="button-container mt-6" v-else>
+          <v-row>
+            <v-col md="12">
+              <button class="btn btn-join" @click.prevent="handleLogout">Log Out</button>
             </v-col>
           </v-row>
         </div>
@@ -60,6 +70,7 @@ import { required } from 'vuelidate/lib/validators';
 import axios from 'axios';
 import SignIn from '~/components/home/account/SignIn';
 import SignUp from '~/components/home/account/SignUp';
+import { mapState } from 'vuex';
 
 export default {
   name: 'SignInSignUp',
@@ -72,7 +83,18 @@ export default {
   data() {
     return {
       show_login_popup: false,
+      user: null
     };
+  },
+
+  computed: {
+    ...mapState({
+      isLoggedIn: state => state.auth.isLoggedIn
+    })
+  },
+
+  created() {
+    this.user = JSON.parse(localStorage.getItem('auth_user'))
   },
 
   methods: {
@@ -82,6 +104,12 @@ export default {
 
     hideLoginPopup() {
       this.show_login_popup = false;
+    },
+
+    handleLogout(){
+      this.$store.dispatch('auth/setAuthStatus', false);
+      localStorage.removeItem('auth_user')
+      localStorage.removeItem('token')
     }
   }
 };
