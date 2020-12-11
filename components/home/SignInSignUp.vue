@@ -41,10 +41,10 @@
             </v-tab>
 
             <v-tab-item key="signin" id="signin" class="mt-4">
-              <SignIn :show_login_popup="show_login_popup"></SignIn>
+              <SignIn @hideLoginPopup="hideLoginPopup"></SignIn>
             </v-tab-item>
             <v-tab-item key="join" id="join" class="mt-4">
-              <SignUp></SignUp>
+              <SignUp @hideLoginPopup="hideLoginPopup"></SignUp>
             </v-tab-item>
           </v-tabs>
         </div>
@@ -78,6 +78,10 @@ export default {
   methods: {
     showLoginPopup() {
       this.show_login_popup = true;
+    },
+
+    hideLoginPopup() {
+      this.show_login_popup = false;
     }
   }
 };
