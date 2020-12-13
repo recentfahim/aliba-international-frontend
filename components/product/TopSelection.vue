@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <v-row class="ml-0 mr-0">
-                    <v-col md="3" v-for="product in top_selection">
+                    <v-col md="3" v-for="(product, index) in top_selection" :key="index">
                         <TopSelectionItem :product="product"></TopSelectionItem>
                     </v-col>
                 </v-row>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <v-row class="ml-0 mr-0">
-                    <v-col md="3" v-for="product in new_arrival">
+                    <v-col md="3" v-for="(product, index) in new_arrival" :key="index">
                         <TopSelectionItem :product="product"></TopSelectionItem>
                     </v-col>
                 </v-row>

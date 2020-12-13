@@ -21,7 +21,7 @@
             </v-col>
         </v-row>
         <v-row class="m-0">
-            <v-col md="4" v-for="product in products">
+            <v-col md="4" v-for="(product, index) in products" :key="index">
                 <top-ranking-product :product="product"></top-ranking-product>
             </v-col>
         </v-row>
