@@ -37,10 +37,6 @@ export default {
     components: {
         TopRankingProduct
     },
-  created() {
-      console.log(this.products)
-  }
-
 };
 </script>
 
