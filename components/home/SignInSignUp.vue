@@ -24,7 +24,7 @@
         <div class="button-container mt-6" v-else>
           <v-row>
             <v-col md="12">
-              <button class="btn btn-join" @click.prevent="handleLogout">Log Out</button>
+              <button class="btn btn-logout" @click.prevent="handleLogout">Log Out</button>
             </v-col>
           </v-row>
         </div>
@@ -148,6 +148,14 @@ export default {
   padding: 6px 0;
   float: right;
 }
+.btn-logout {
+  width: 80px;
+  font-size: 13px;
+  color: #fff;
+  background-color: #ff4747;
+  border-radius: 15px;
+  padding: 6px 0;
+}
 
 .btn-sign-in {
   width: 80px;
@@ -160,6 +168,9 @@ export default {
 }
 
 .btn-join:hover {
+  background-color: #ff5050;
+}
+.btn-logout:hover {
   background-color: #ff5050;
 }
 
