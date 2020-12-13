@@ -13,10 +13,6 @@
 export default {
   name: "grid-product",
   props: ['product'],
-
-  created() {
-    console.log(this.product)
-  }
 }
 </script>
 

@@ -1,17 +1,18 @@
 <template>
     <div class="product">
         <div class="product-image">
-            <img src="https://ae01.alicdn.com/kf/Hb9fa59a7e5864107bb1fc6db9cb510f3L.jpg_120x120Q90.jpg" alt="gd">
+            <img :src="product.image" alt="">
         </div>
         <div class="product-price">
-            BDT 421
+            BDT {{ product.price }}
         </div>
     </div>
 </template>
 
 <script>
 export default {
-name: "TopRankingProduct"
+  name: "TopRankingProduct",
+  props: ['product']
 }
 </script>
 
