@@ -12,17 +12,8 @@
                     </div>
                 </div>
                 <v-row class="ml-0 mr-0">
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
+                    <v-col md="3" v-for="(product, index) in top_selection" :key="index">
+                        <TopSelectionItem :product="product"></TopSelectionItem>
                     </v-col>
                 </v-row>
 
@@ -42,17 +33,8 @@
                     </div>
                 </div>
                 <v-row class="ml-0 mr-0">
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
+                    <v-col md="3" v-for="(product, index) in new_arrival" :key="index">
+                        <TopSelectionItem :product="product"></TopSelectionItem>
                     </v-col>
                 </v-row>
             </div>
@@ -62,12 +44,26 @@
 
 <script>
 import TopSelectionItem from '~/components/product/TopSelectionItem';
+import axios from 'axios';
 
 export default {
     name: "TopSelection",
     components: {
         TopSelectionItem
-    }
+    },
+  data(){
+      return{
+        top_selection: null,
+        new_arrival: null
+      }
+  },
+
+  created() {
+      axios.get(process.env.baseURL + `top-selection-new-arrival`).then((response) =>{
+        this.top_selection = response.data.top_selection_products
+        this.new_arrival = response.data.new_arrival_products
+      })
+  }
 }
 </script>
 

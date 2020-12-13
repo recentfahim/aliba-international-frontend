@@ -21,14 +21,8 @@
             </v-col>
         </v-row>
         <v-row class="m-0">
-            <v-col md="4">
-                <top-ranking-product></top-ranking-product>
-            </v-col>
-            <v-col md="4">
-                <top-ranking-product></top-ranking-product>
-            </v-col>
-            <v-col md="4">
-                <top-ranking-product></top-ranking-product>
+            <v-col md="4" v-for="(product, index) in products" :key="index">
+                <top-ranking-product :product="product"></top-ranking-product>
             </v-col>
         </v-row>
     </div>
@@ -39,10 +33,10 @@ import TopRankingProduct from '~/components/product/TopRankingProduct';
 
 export default {
     name: 'TopRankingProductContainer',
-    props: ['title'],
+    props: ['title', 'products'],
     components: {
         TopRankingProduct
-    }
+    },
 };
 </script>
 
