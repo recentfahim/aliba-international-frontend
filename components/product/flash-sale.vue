@@ -11,7 +11,14 @@
                 </div>
 
             </div>
-            <div class="product-container">
+            <div v-if="pageLoading" class="mt-5 mb-5">
+              <div class="d-flex justify-content-center text-success">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-container" v-else>
                 <v-row>
                     <flash-sale-product v-for="(product, index) in flash_sale_products" :product="product" :key="index"></flash-sale-product>
                 </v-row>
@@ -33,12 +40,14 @@ export default {
     data(){
       return{
         flash_sale_products: null,
+        pageLoading: true
       }
     },
 
     created() {
       axios.get(process.env.baseURL + `home-product`).then((response) => {
           this.flash_sale_products = response.data.data
+          this.pageLoading = false
       })
     }
 };

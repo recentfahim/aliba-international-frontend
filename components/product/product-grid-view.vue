@@ -1,5 +1,12 @@
 <template>
-    <div class="row">
+    <div class="row text-center" v-if="pageLoading">
+        <div class="d-flex justify-content-center text-success">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+    </div>
+    <div class="row" v-else>
         <grid-product v-for="(product, index) in products" :key="index" :product="product"></grid-product>
     </div>
 </template>
@@ -13,13 +20,15 @@ export default {
 
   data() {
     return{
-      products: null
+      products: null,
+      pageLoading: true
     }
   },
 
   created() {
     axios.get(process.env.baseURL + `product`).then((response) => {
       this.products = response.data.data
+      this.pageLoading = false
     })
   }
 

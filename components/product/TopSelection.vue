@@ -11,7 +11,14 @@
                         <span class="view-more">View more</span>
                     </div>
                 </div>
-                <v-row class="ml-0 mr-0">
+                <v-row v-if="pageLoading">
+                  <div class="d-flex justify-content-center text-success">
+                    <div class="spinner-border" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </v-row>
+                <v-row class="ml-0 mr-0" v-else>
                     <v-col md="3" v-for="(product, index) in top_selection" :key="index">
                       <nuxt-link :to="`/product/${product.id}`">
                         <TopSelectionItem :product="product"></TopSelectionItem>
@@ -34,7 +41,14 @@
                         <span class="view-more">View more</span>
                     </div>
                 </div>
-                <v-row class="ml-0 mr-0">
+              <v-row v-if="pageLoading">
+                <div class="d-flex justify-content-center text-success">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+              </v-row>
+                <v-row class="ml-0 mr-0" v-else>
                     <v-col md="3" v-for="(product, index) in new_arrival" :key="index">
                       <nuxt-link :to="`/product/${product.id}`">
                         <TopSelectionItem :product="product"></TopSelectionItem>
@@ -58,7 +72,8 @@ export default {
   data(){
       return{
         top_selection: null,
-        new_arrival: null
+        new_arrival: null,
+        pageLoading: true
       }
   },
 
@@ -66,6 +81,7 @@ export default {
       axios.get(process.env.baseURL + `top-selection-new-arrival`).then((response) =>{
         this.top_selection = response.data.top_selection_products
         this.new_arrival = response.data.new_arrival_products
+        this.pageLoading = false
       })
   }
 }

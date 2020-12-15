@@ -1,12 +1,33 @@
 <template>
     <v-row>
-        <v-col md="4">
+        <v-col md="4" v-if="pageLoading">
+          <div class="d-flex justify-content-center text-success">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </v-col>
+        <v-col md="4" v-else>
             <TopRankingProductContainer :title="headphone_title" :products="headphones"></TopRankingProductContainer>
         </v-col>
-        <v-col md="4">
+        <v-col md="4" v-if="pageLoading">
+          <div class="d-flex justify-content-center text-success">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </v-col>
+        <v-col md="4" v-else>
             <TopRankingProductContainer :title="jewelry_title" :products="jewelry"></TopRankingProductContainer>
         </v-col>
-        <v-col md="4">
+        <v-col md="4" v-if="pageLoading">
+          <div class="d-flex justify-content-center text-success">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </v-col>
+        <v-col md="4" v-else>
             <TopRankingProductContainer :title="wired_headphone_title" :products="wired_headphones"></TopRankingProductContainer>
         </v-col>
     </v-row>
@@ -28,7 +49,8 @@ export default {
           jewelry_title: 'Jewelry',
           headphones: null,
           wired_headphones: null,
-          jewelry: null
+          jewelry: null,
+          pageLoading: true
         }
     },
 
@@ -37,6 +59,7 @@ export default {
         this.jewelry = response.data.jewelry_products
         this.headphones = response.data.headphone_products
         this.wired_headphones = response.data.wired_headphone_products
+        this.pageLoading = false
       })
   }
 }
