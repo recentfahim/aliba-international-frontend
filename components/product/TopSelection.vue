@@ -13,7 +13,9 @@
                 </div>
                 <v-row class="ml-0 mr-0">
                     <v-col md="3" v-for="(product, index) in top_selection" :key="index">
+                      <nuxt-link :to="`/product/${product.id}`">
                         <TopSelectionItem :product="product"></TopSelectionItem>
+                      </nuxt-link>
                     </v-col>
                 </v-row>
 
@@ -34,7 +36,9 @@
                 </div>
                 <v-row class="ml-0 mr-0">
                     <v-col md="3" v-for="(product, index) in new_arrival" :key="index">
+                      <nuxt-link :to="`/product/${product.id}`">
                         <TopSelectionItem :product="product"></TopSelectionItem>
+                      </nuxt-link>
                     </v-col>
                 </v-row>
             </div>
