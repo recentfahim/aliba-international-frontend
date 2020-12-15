@@ -22,7 +22,9 @@
         </v-row>
         <v-row class="m-0">
             <v-col md="4" v-for="(product, index) in products" :key="index">
+              <nuxt-link :to="`/product/${product.id}`">
                 <top-ranking-product :product="product"></top-ranking-product>
+              </nuxt-link>
             </v-col>
         </v-row>
     </div>
