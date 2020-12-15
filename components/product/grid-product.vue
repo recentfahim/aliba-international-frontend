@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-2">
+    <div class="col-md-2 col-sm-3 col-6">
       <div class="product-grid">
       <nuxt-link :to="`/product/${product.id}`">
         <div >
