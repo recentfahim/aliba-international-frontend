@@ -1,6 +1,7 @@
 <template>
     <v-col md="3">
         <div class="product-grid">
+          <nuxt-link :to="`/product/${product.id}`">
             <div >
                 <img class="product-image" :src="product.image">
             </div>
@@ -12,6 +13,7 @@
                     20% off
                 </span>
             </div>
+          </nuxt-link>
         </div>
     </v-col>
 </template>
@@ -33,10 +35,7 @@ export default {
     position: relative;
 }
 .product-price{
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
-    line-height: 18px;
+    margin-top: 7px;
     color: #000;
     font-size: 14px;
     font-weight: 900;

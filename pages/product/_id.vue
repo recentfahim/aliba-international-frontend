@@ -1,6 +1,5 @@
 <template lang="html">
     <div class="martfury">
-        <bread-crumb :breadcrumb="breadCrumb" layout="fullwidth" />
         <div class="ps-page--product">
             <div class="ps-container">
                 <div class="ps-page__container">
@@ -9,12 +8,11 @@
                     </div>
                     <div class="ps-page__right">
                         <product-widgets
-                            v-if="collections !== null"
-                            collection-slug="widget_same_brand"
+                            v-if="product"
                         />
                     </div>
                 </div>
-                <customer-bought
+<!--                <customer-bought
                     v-if="collections !== null"
                     layout="fullwidth"
                     collection-slug="customer_bought"
@@ -23,10 +21,9 @@
                     v-if="collections !== null"
                     layout="fullwidth"
                     collection-slug="shop-recommend-items"
-                />
+                />-->
             </div>
         </div>
-        <newsletters layout="fullwidth"/>
     </div>
 </template>
 
@@ -54,11 +51,11 @@ export default {
         ProductDetailFullwidth
     },
 
-    computed: {
+    /*computed: {
         ...mapState({
             collections: state => state.collection.collections,
         })
-    },
+    },*/
     data() {
         return {
             productId: this.$route.params.id,
@@ -67,7 +64,7 @@ export default {
             product: ''
         };
     },
-    async created() {
+    /*async created() {
         const queries = [
             'customer_bought',
             'shop-recommend-items',
@@ -100,7 +97,7 @@ export default {
                 text: product.title
             }
         ];
-    },
+    },*/
     mounted() {
         let product_id = this.$route.params.id
         axios.get(`${process.env.baseURL}single-product/${product_id}`).then((response) => {
