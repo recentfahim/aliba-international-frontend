@@ -1,5 +1,12 @@
 <template>
-    <div class="category-container">
+    <div class="category-container" v-if="pageLoading">
+      <div class="d-flex justify-content-center text-success">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <div class="category-container" v-else>
         <ul class="category-list">
             <li class="category-item" v-for="category in categories" @mouseenter="getSubCategory(category.Id)">
                 <div class="d-flex">
@@ -21,7 +28,8 @@ export default {
     data() {
         return{
             categories: [],
-            sub_categories: []
+            sub_categories: [],
+            pageLoading: true
         }
     },
 
@@ -36,6 +44,7 @@ export default {
     created() {
         axios.get(process.env.baseURL + `category`).then((response) => {
             this.categories = response.data.data
+            this.pageLoading = false
         })
     }
 };
