@@ -1,11 +1,15 @@
 <template>
-    <div class="product-grid">
+    <div class="col-md-2 col-sm-3 col-6">
+      <div class="product-grid">
+      <nuxt-link :to="`/product/${product.id}`">
         <div >
             <img class="product-image" :src="product.image">
         </div>
         <div class="product-price">
             BDT {{ this.product.price }}
         </div>
+      </nuxt-link>
+      </div>
     </div>
 </template>
 
@@ -13,29 +17,19 @@
 export default {
   name: "grid-product",
   props: ['product'],
-
-  created() {
-    console.log(this.product)
-  }
 }
 </script>
 
 <style scoped>
 .product-grid{
-    width: 15.367%;
     margin: 0 8px 16px;
     padding: 8px;
     background: #ffffff;
-    height: 200px;
     border-radius: 10px;
     position: relative;
 }
 .product-price{
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
     display: block;
-    line-height: 18px;
     color: #000;
     font-size: 14px;
     font-weight: 900;

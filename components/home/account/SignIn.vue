@@ -41,7 +41,6 @@ import axios from 'axios';
 
 export default {
   name: "SignIn",
-  props: ['show_login_popup'],
   data() {
     return {
       username: null,
@@ -67,6 +66,10 @@ export default {
     password: { required }
   },
   methods: {
+    hideLoginPopup(){
+      this.$emit('hideLoginPopup', false)
+    },
+
     handleSubmit() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
@@ -90,7 +93,7 @@ export default {
             localStorage.setItem('auth_user', JSON.stringify(response.data))
             localStorage.setItem('token', response.data.access_token)
             this.$store.dispatch('auth/setAuthStatus', true);
-            this.show_login_popup = false
+            this.hideLoginPopup();
             this.$router.push('/');
           }
         });

@@ -5,16 +5,26 @@
         <div class="user-icon">
           <i class="fas fa-user-circle"></i>
         </div>
-        <div class="welcome">
+        <div class="welcome" v-if="!isLoggedIn">
           Welcome To Aliba International
         </div>
-        <div class="button-container mt-6">
+        <div v-else class="welcome">
+          Hi, {{ user.name }}
+        </div>
+        <div class="button-container mt-6" v-if="!isLoggedIn">
           <v-row>
             <v-col md="6">
               <button class="btn btn-join" @click="showLoginPopup">Join</button>
             </v-col>
             <v-col md="6">
               <button class="btn btn-sign-in" @click="showLoginPopup">Sign In</button>
+            </v-col>
+          </v-row>
+        </div>
+        <div class="button-container mt-6" v-else>
+          <v-row>
+            <v-col md="12">
+              <button class="btn btn-logout" @click.prevent="handleLogout">Log Out</button>
             </v-col>
           </v-row>
         </div>
@@ -41,10 +51,10 @@
             </v-tab>
 
             <v-tab-item key="signin" id="signin" class="mt-4">
-              <SignIn :show_login_popup="show_login_popup"></SignIn>
+              <SignIn @hideLoginPopup="hideLoginPopup"></SignIn>
             </v-tab-item>
             <v-tab-item key="join" id="join" class="mt-4">
-              <SignUp></SignUp>
+              <SignUp @hideLoginPopup="hideLoginPopup"></SignUp>
             </v-tab-item>
           </v-tabs>
         </div>
@@ -60,6 +70,7 @@ import { required } from 'vuelidate/lib/validators';
 import axios from 'axios';
 import SignIn from '~/components/home/account/SignIn';
 import SignUp from '~/components/home/account/SignUp';
+import { mapState } from 'vuex';
 
 export default {
   name: 'SignInSignUp',
@@ -72,12 +83,33 @@ export default {
   data() {
     return {
       show_login_popup: false,
+      user: null
     };
+  },
+
+  computed: {
+    ...mapState({
+      isLoggedIn: state => state.auth.isLoggedIn
+    })
+  },
+
+  created() {
+    this.user = JSON.parse(localStorage.getItem('auth_user'))
   },
 
   methods: {
     showLoginPopup() {
       this.show_login_popup = true;
+    },
+
+    hideLoginPopup() {
+      this.show_login_popup = false;
+    },
+
+    handleLogout(){
+      this.$store.dispatch('auth/setAuthStatus', false);
+      localStorage.removeItem('auth_user')
+      localStorage.removeItem('token')
     }
   }
 };
@@ -116,6 +148,14 @@ export default {
   padding: 6px 0;
   float: right;
 }
+.btn-logout {
+  width: 80px;
+  font-size: 13px;
+  color: #fff;
+  background-color: #ff4747;
+  border-radius: 15px;
+  padding: 6px 0;
+}
 
 .btn-sign-in {
   width: 80px;
@@ -128,6 +168,9 @@ export default {
 }
 
 .btn-join:hover {
+  background-color: #ff5050;
+}
+.btn-logout:hover {
   background-color: #ff5050;
 }
 

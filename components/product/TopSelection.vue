@@ -11,18 +11,18 @@
                         <span class="view-more">View more</span>
                     </div>
                 </div>
-                <v-row class="ml-0 mr-0">
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
+                <v-row v-if="pageLoading">
+                  <div class="d-flex justify-content-center text-success">
+                    <div class="spinner-border" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </v-row>
+                <v-row class="ml-0 mr-0" v-else>
+                    <v-col md="3" v-for="(product, index) in top_selection" :key="index">
+                      <nuxt-link :to="`/product/${product.id}`">
+                        <TopSelectionItem :product="product"></TopSelectionItem>
+                      </nuxt-link>
                     </v-col>
                 </v-row>
 
@@ -41,18 +41,18 @@
                         <span class="view-more">View more</span>
                     </div>
                 </div>
-                <v-row class="ml-0 mr-0">
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
-                    </v-col>
-                    <v-col md="3">
-                        <TopSelectionItem></TopSelectionItem>
+              <v-row v-if="pageLoading">
+                <div class="d-flex justify-content-center text-success">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+              </v-row>
+                <v-row class="ml-0 mr-0" v-else>
+                    <v-col md="3" v-for="(product, index) in new_arrival" :key="index">
+                      <nuxt-link :to="`/product/${product.id}`">
+                        <TopSelectionItem :product="product"></TopSelectionItem>
+                      </nuxt-link>
                     </v-col>
                 </v-row>
             </div>
@@ -62,12 +62,28 @@
 
 <script>
 import TopSelectionItem from '~/components/product/TopSelectionItem';
+import axios from 'axios';
 
 export default {
     name: "TopSelection",
     components: {
         TopSelectionItem
-    }
+    },
+  data(){
+      return{
+        top_selection: null,
+        new_arrival: null,
+        pageLoading: true
+      }
+  },
+
+  created() {
+      axios.get(process.env.baseURL + `top-selection-new-arrival`).then((response) =>{
+        this.top_selection = response.data.top_selection_products
+        this.new_arrival = response.data.new_arrival_products
+        this.pageLoading = false
+      })
+  }
 }
 </script>
 
