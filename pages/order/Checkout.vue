@@ -140,12 +140,15 @@
               <span class="address-text">Address</span>
             </v-col>
             <v-col md="6">
-              <v-text-field
-                  placeholder="City"
-                  v-model="city"
+              <v-select v-if="locations"
+                  :items="locations"
+                  item-text="name"
+                  item-value="id"
+                  label="City"
                   class="ps-text-field"
-                  outlined>
-              </v-text-field>
+                  dense
+                  outlined
+              ></v-select>
             </v-col>
             <v-col md="6">
               <v-text-field
@@ -178,6 +181,7 @@
 
 <script>
 import vodal from 'vodal';
+import axios from 'axios';
 
 export default {
   name: 'Checkout',
@@ -187,8 +191,20 @@ export default {
   },
   data(){
     return{
-      show_address_popup: false
+      show_address_popup: false,
+      locations: null,
+      area: null,
+      location: null,
+      name: null,
+      address: null,
+      mobile_number: null
     }
+  },
+  created() {
+    axios.get(process.env.baseURL + `cities`).then((response) => {
+      this.locations = response.data.data
+      console.log(this.locations)
+    })
   },
   methods: {
     showAddressPopup(){
