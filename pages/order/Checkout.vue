@@ -10,6 +10,18 @@
                   <span class="checkout-info-item-title">Shipping Information</span>
                 </div>
                 <div class="mt-5">
+                  <ul class="address-container">
+                    <li v-for="user_address in user_addresses" class="address-item mt-2">
+                      <div>
+                        <span class="address-item-name">{{ user_address.name }}</span>
+                      </div>
+                      <div>
+                        <span class="address-item-address">{{ user_address.address}}</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-5">
                   <span class="new-address" @click="showAddressPopup">+ Add new address</span>
                 </div>
               </div>
@@ -203,6 +215,7 @@ export default {
   data(){
     return{
       show_address_popup: false,
+      user_addresses: null,
       locations: null,
       areas: null,
       area: null,
@@ -217,6 +230,14 @@ export default {
     axios.get(process.env.baseURL + `cities`).then((response) => {
       this.locations = response.data.data
     })
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer '+ localStorage.getItem('token')
+    }
+    axios.get(process.env.baseURL + `user-address`, {headers: headers}).then((response) => {
+      this.user_addresses = response.data.data
+    })
+
   },
   watch: {
     location () {
@@ -243,7 +264,7 @@ export default {
         'address_area': this.area,
         'address': this.address
       }
-      axios.post(process.env.baseURL + `user-address`, data, { headers: headers })
+      axios.post(process.env.baseURL + `save-address`, data, { headers: headers })
         .then((response) => {
           if(response.data.success) {
             this.btn_loading = false
@@ -375,5 +396,24 @@ export default {
 }
 .total-pay{
   color: #000000;
+}
+.address-item{
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.16);
+  background-color: #fff;
+  padding: 16px 20px;
+  min-height: 67px;
+}
+.address-container{
+  list-style-type: none;
+}
+.address-item-name{
+  font-family: Open Sans,Arial,Helvetica,sans-serif,Heiti;
+  font-size: 14px;
+  font-weight: 700;
+}
+.address-item-address{
+  font-family: Open Sans,Arial,Helvetica,sans-serif,Heiti;
+  font-size: 12px;
 }
 </style>
