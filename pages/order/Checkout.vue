@@ -11,7 +11,7 @@
                 </div>
                 <div class="mt-5">
                   <ul class="address-container">
-                    <li v-for="user_address in user_addresses" class="address-item mt-2">
+                    <li v-for="user_address in user_addresses" class="address-item mt-2" v-bind:class="{ active: selected_user_address === user_address}" @click="selected_address(user_address)">
                       <div>
                         <span class="address-item-name">{{ user_address.name }}</span>
                       </div>
@@ -223,7 +223,8 @@ export default {
       name: null,
       address: null,
       mobile_number: null,
-      btn_loading: false
+      btn_loading: false,
+      selected_user_address: ''
     }
   },
   created() {
@@ -249,6 +250,10 @@ export default {
   methods: {
     showAddressPopup(){
       this.show_address_popup = true
+    },
+
+    selected_address(user_address){
+      this.selected_user_address = user_address
     },
 
     saveAddress(){
@@ -415,5 +420,8 @@ export default {
 .address-item-address{
   font-family: Open Sans,Arial,Helvetica,sans-serif,Heiti;
   font-size: 12px;
+}
+.active{
+  background: #ebfaf8;
 }
 </style>
