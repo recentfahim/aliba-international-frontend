@@ -273,6 +273,9 @@ export default {
         .then((response) => {
           if(response.data.success) {
             this.btn_loading = false
+            axios.get(process.env.baseURL + `user-address`, {headers: headers}).then((response) => {
+              this.user_addresses = response.data.data
+            })
             this.show_address_popup = false
             this.$notify(
                 {
