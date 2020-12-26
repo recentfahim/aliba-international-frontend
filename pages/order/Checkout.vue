@@ -146,17 +146,22 @@
                   item-value="id"
                   label="City"
                   class="ps-text-field"
+                  v-model="location"
                   dense
                   outlined
               ></v-select>
             </v-col>
             <v-col md="6">
-              <v-text-field
-                  placeholder="Area"
-                  v-model="area"
-                  class="ps-text-field"
-                  outlined>
-              </v-text-field>
+              <v-select v-if="areas"
+                        :items="areas"
+                        item-text="name"
+                        item-value="id"
+                        label="Area"
+                        class="ps-text-field"
+                        v-model="area"
+                        dense
+                        outlined
+              ></v-select>
             </v-col>
             <v-col md="12">
               <v-text-field
@@ -166,8 +171,14 @@
                   outlined>
               </v-text-field>
             </v-col>
-            <v-col md="12">
-              <button class="btn btn-danger btn-lg w-25 btn-save">
+            <v-col md="12" v-if="btn_loading">
+              <button class="btn btn-danger btn-lg w-25 btn-save" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Saving
+              </button>
+            </v-col>
+            <v-col md="12" v-else>
+              <button class="btn btn-danger btn-lg w-25 btn-save" @click="saveAddress">
                 Save and Continue
               </button>
             </v-col>
@@ -193,23 +204,72 @@ export default {
     return{
       show_address_popup: false,
       locations: null,
+      areas: null,
       area: null,
       location: null,
       name: null,
       address: null,
-      mobile_number: null
+      mobile_number: null,
+      btn_loading: false
     }
   },
   created() {
     axios.get(process.env.baseURL + `cities`).then((response) => {
       this.locations = response.data.data
-      console.log(this.locations)
     })
+  },
+  watch: {
+    location () {
+      axios.get(process.env.baseURL + "areas/"+ this.location).then((response) => {
+        this.areas = response.data.data
+      })
+    }
   },
   methods: {
     showAddressPopup(){
       this.show_address_popup = true
-    }
+    },
+
+    saveAddress(){
+      this.btn_loading = true
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+ localStorage.getItem('token')
+      }
+      let data = {
+        'address_name': this.name,
+        'address_mobile_number': this.mobile_number,
+        'address_location': this.location,
+        'address_area': this.area,
+        'address': this.address
+      }
+      axios.post(process.env.baseURL + `user-address`, data, { headers: headers })
+        .then((response) => {
+          if(response.data.success) {
+            this.btn_loading = false
+            this.show_address_popup = false
+            this.$notify(
+                {
+                  group: 'addCartSuccess',
+                  type: 'warn',
+                  title: 'Error!',
+                  text: response.data.message
+                }
+            )
+          }
+          else{
+            this.$notify(
+                {
+                  group: 'addCartSuccess',
+                  type: 'warn',
+                  title: 'Error!',
+                  text: response.data.message
+                }
+            )
+            return;
+          }
+        })
+    },
   }
 };
 </script>
