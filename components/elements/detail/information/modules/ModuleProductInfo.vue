@@ -12,6 +12,7 @@
       BDT {{ product.Price.ConvertedPriceWithoutSign }}
     </h4>
   </div>
+
 </template>
 
 <script>
