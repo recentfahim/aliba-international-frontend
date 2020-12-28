@@ -23,6 +23,7 @@
             <product-grid-view></product-grid-view>
         </div>    
     </main>
+    
 </template>
 <script>
 import { mapState } from 'vuex';

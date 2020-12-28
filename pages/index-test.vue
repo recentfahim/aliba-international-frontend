@@ -15,11 +15,11 @@
         </template>
         <home-ads />
         <download-app />
-        <new-arrivals
+        <!-- <new-arrivals
             v-if="collections !== null"
             collection-slug="new-arrivals-products"
         />
-        <newsletters layout="fullwidth"/>
+        <newsletters layout="fullwidth"/> -->
     </main>
 </template>
 <script>

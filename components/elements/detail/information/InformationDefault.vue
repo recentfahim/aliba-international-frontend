@@ -2,13 +2,16 @@
     <div class="ps-product__info">
         <module-product-info :product="product" />
 
-<!--        <module-product-detail-desc :product="product" />
+       <!-- <module-product-detail-desc :product="product" />
 
         <module-product-shopping :product="product" />
 
-        <module-product-detail-specification />
+        <module-product-detail-specification /> -->
 
-        <module-product-detail-sharing />-->
+        <module-product-detail-sharing />
+        <module-Secondary-Part />
+
+
     </div>
 </template>
 
@@ -20,6 +23,7 @@ import ModuleProductDetailDesc from '~/components/elements/detail/information/mo
 import Rating from '~/components/elements/Rating';
 import ModuleProductShopping from '~/components/elements/detail/information/modules/ModuleProductShopping';
 import ModuleProductInfo from '~/components/elements/detail/information/modules/ModuleProductInfo';
+import SecondaryPart from  '~/components/elements/detail/information/modules/SecondaryPart.vue';
 
 export default {
     name: 'InformationDefault',
