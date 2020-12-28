@@ -2,14 +2,13 @@
     <div class="ps-product__info">
         <module-product-info :product="product" />
 
-       <!-- <module-product-detail-desc :product="product" />
+<!--        <module-product-detail-desc :product="product" />-->
 
         <module-product-shopping :product="product" />
 
-        <module-product-detail-specification /> -->
+<!--        <module-product-detail-specification />-->
 
         <module-product-detail-sharing />
-        <module-Secondary-Part />
 
 
     </div>
@@ -39,4 +38,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-product--detail .ps-product__header .ps-product__info{
+  padding-left: 0;
+}
+</style>

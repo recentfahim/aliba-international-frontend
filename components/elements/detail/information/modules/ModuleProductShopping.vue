@@ -1,5 +1,6 @@
 <template lang="html">
-    <div class="ps-product__shopping">
+    <div class="ps-product__shopping d-block mb-0">
+      <div>
         <figure>
             <figcaption>Quantity</figcaption>
             <div class="form-group--number">
@@ -17,24 +18,30 @@
                 />
             </div>
         </figure>
-        <a
-            class="ps-btn ps-btn--black"
-            href="#"
-            @click.prevent="handleAddToCart"
-        >
-            Add to cart
-        </a>
-        <a class="ps-btn" href="#" @click.prevent="">
+      </div>
+      <div class="d-flex mt-4">
+        <div>
+          <a class="btn-buy-now" href="#" @click.prevent="">
             Buy Now
-        </a>
-        <div class="ps-product__actions">
+          </a>
+        </div>
+
+        <div class="ml-2">
+          <a
+              class="btn-add-to-cart"
+              href="#"
+              @click.prevent="handleAddToCart"
+          >
+              Add to Cart
+          </a>
+        </div>
+
+        <div class="ps-product__actions ml-2">
             <a href="#">
                 <i class="icon-heart"></i>
             </a>
-            <a href="#">
-                <i class="icon-chart-bars"></i>
-            </a>
         </div>
+      </div>
     </div>
 </template>
 
@@ -140,4 +147,35 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.btn-buy-now{
+  border-style: solid;
+  background-color: #ff4747;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 6px 30px;
+  color: #fff;
+  height: 44px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-buy-now:hover{
+  background-color: #fc5858;
+}
+
+.btn-add-to-cart{
+  border-style: solid;
+  background-color: #ff9a00;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 6px 30px;
+  color: #fff;
+  height: 44px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btn-add-to-cart:hover{
+  background-color: #fca626;
+}
+</style>

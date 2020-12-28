@@ -1,10 +1,10 @@
 <template lang="html">
   <div>
-    <h1>{{ product.Title }}</h1>
-    <div class="ps-product__meta">
+    <h1 class="product-title-text">{{ product.Title }}</h1>
+    <div class="ps-product__meta mt-4">
       <div class="ps-product__rating">
         <div v-for="product_meta in product.FeaturedValues" v-if="product_meta.Name === 'TotalSales'">
-          <span> Total Sales {{ product_meta.Value}}</span>
+          <span class="ml-0">Total Sales {{ product_meta.Value}}</span>
         </div>
       </div>
     </div>
@@ -28,5 +28,14 @@ export default {
 <style lang="scss" scoped>
 .ps-product__rating span{
   margin-left: 0;
+}
+
+.product-title-text {
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 </style>
