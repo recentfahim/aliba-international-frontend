@@ -79,15 +79,16 @@ export default {
             let existItem;
             if (cartItemsOnCookie) {
                 existItem = cartItemsOnCookie.cartItems.find(
-                    item => item.id === this.product.id
+                    item => item.id === this.product.Id
                 );
             }
 
             let item = {
-                id: this.product.id,
+                id: this.product.Id,
                 quantity: this.quantity,
-                price: this.product.price
+                price: this.product.Price.ConvertedPriceWithoutSign
             };
+            console.log(item)
             if (existItem !== undefined) {
                 if (this.quantity + existItem.quantity > 10) {
                     this.$notify({
@@ -117,7 +118,7 @@ export default {
             this.$notify({
                 group: 'addCartSuccess',
                 title: 'Success!',
-                text: `${this.product.title} has been added to your cart!`
+                text: `${this.product.Title} has been added to your cart!`
             });
         },
 
