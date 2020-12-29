@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-   <h4 v-if="product.IsSellAllowed" class="ps-product__price sale">
+   <h4 v-if="product.IsSellAllowed" class="ps-product-price">
       BDT {{ product.Price.ConvertedPriceWithoutSign }}
     </h4>
   </div>
@@ -28,6 +28,12 @@ export default {
 <style lang="scss" scoped>
 .ps-product__rating span{
   margin-left: 0;
+}
+.ps-product-price{
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Open Sans,sans-serif;
 }
 
 .product-title-text {
