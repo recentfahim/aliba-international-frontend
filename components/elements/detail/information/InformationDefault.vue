@@ -1,15 +1,16 @@
 <template lang="html">
     <div class="ps-product__info">
         <module-product-info :product="product" />
-
-       <!-- <module-product-detail-desc :product="product" />
+<!-- 
+       <module-product-detail-desc :product="product" />
 
         <module-product-shopping :product="product" />
 
-        <module-product-detail-specification /> -->
+        <module-product-detail-specification />
 
         <module-product-detail-sharing />
-        <module-Secondary-Part />
+        <module-Secondary-Part /> -->
+        <!-- <SecondaryPart> </SecondaryPart> -->
 
 
     </div>
@@ -34,7 +35,8 @@ export default {
         Rating,
         ModuleProductDetailDesc,
         ModuleProductDetailSpecification,
-        ModuleProductDetailSharing
+        ModuleProductDetailSharing,
+        SecondaryPart
     },
 };
 </script>

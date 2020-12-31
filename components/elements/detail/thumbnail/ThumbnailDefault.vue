@@ -55,17 +55,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
-                
-         
-
-
-               
-                
-           
-            
-               
-            
+            </div>       
         </client-only>
     <!-- </v-row>     -->
 </template>
@@ -164,5 +154,49 @@ export default {
 .widget-detail-booth-image .util-clearfix {
     zoom: 1;
 }
+
+// subimage
+
+.ps-product--detail .ps-product__thumbnail .ps-product__variants {
+    max-width: 70px;
+    flex-basis: 100%;
+    padding-right: 10px;
+}
+
+.ps-product--detail .ps-product__variants .swiper {
+    max-height: inherit;
+    position: relative;
+}
+.swiper-container-vertical > .swiper-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+element.style {
+    transform: translate3d(0px, 0px, 0px);
+}
+.ps-product--detail .ps-product__variants .swiper-slide {
+    cursor: pointer;
+    height: auto !important;
+    padding-right: 1px;
+}
+.ps-product--detail .ps-product__variants .swiper-slide img {
+    width: 100%;
+    opacity: 0.5;
+    transition: all 0.4s ease;
+    border: 1px solid #d9d9d9;
+}
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+
 
 </style>
