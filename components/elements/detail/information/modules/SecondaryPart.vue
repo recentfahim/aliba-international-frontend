@@ -134,7 +134,7 @@ export default {
 <style  lang="scss" scoped>
 .main[data-v-965ea09e]{
     // padding: 0;
-    padding: 30px 72px 40px 70px;
+    padding: 30px 72px 40px 60px;
     margin: 0;
     background-color: #f2f2f2;
     
