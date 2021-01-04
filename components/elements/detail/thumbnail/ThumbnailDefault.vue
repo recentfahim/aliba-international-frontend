@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-            </div>       
+            </div>
         </client-only>
     <!-- </v-row>     -->
 </template>
@@ -78,7 +78,7 @@ export default {
                 }
             },
             swiperOptionThumbs: {
-                direction: 'vertical',
+                direction: 'horizontal',
                 loop: false,
                 spaceBetween: 10,
                 slidesPerView: 3,
@@ -154,7 +154,6 @@ export default {
 .widget-detail-booth-image .util-clearfix {
     zoom: 1;
 }
-
 // subimage
 
 .ps-product--detail .ps-product__thumbnail .ps-product__variants {
@@ -197,6 +196,20 @@ element.style {
     opacity: 0;
     z-index: -1000;
 }
+.ps-product__thumbnail {
+  flex-flow: column nowrap;
+}
 
+.ps-product--detail .ps-product__variants .swiper-slide  {
+  max-width: 50px;
+  margin-right: 8px;
+}
 
+.ps-product--detail .ps-product__variants {
+  max-width: 360px;
+  margin-top: 10px;
+}
+.swiper-wrapper{
+  flex-direction: row;
+}
 </style>

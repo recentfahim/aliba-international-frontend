@@ -66,7 +66,7 @@
         <div class="simple-card-container" style="width: 108px;">
           <div class="img-container" style="width: 108px; height: 108px;">
             <a href="http://localhost:4000/product/abb-521691559512">
-              <img class="simple-card-img" src="//ae01.alicdn.com/kf/Hec8c60c99fc74489997965ef2ff34626u.jpg_220x220q90.jpg" alt="product-image">
+              <img class="simple-card-img" src="https://ae01.alicdn.com/kf/Hec8c60c99fc74489997965ef2ff34626u.jpg_220x220q90.jpg" alt="product-image">
             </a>
           </div>
           <div class="simple-card-price">BDT 966.98

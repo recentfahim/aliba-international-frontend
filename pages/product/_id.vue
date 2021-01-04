@@ -37,7 +37,7 @@
 
                 </div>
                 </div>
-<!--                <customer-bought
+                <customer-bought
                     v-if="collections !== null"
                     layout="fullwidth"
                     collection-slug="customer_bought"
@@ -46,7 +46,7 @@
                     v-if="collections !== null"
                     layout="fullwidth"
                     collection-slug="shop-recommend-items"
-                />-->
+                />
             </div>
         </div>
     </div>
@@ -78,11 +78,11 @@ export default {
         SecondaryPart
     },
 
-    /*computed: {
+    computed: {
         ...mapState({
             collections: state => state.collection.collections,
         })
-    },*/
+    },
     data() {
         return {
             productId: this.$route.params.id,

@@ -6,7 +6,6 @@
             <information-default :product="product" />
         </div>
             <!-- <default-description />-->
-            
             <!-- <v-row >      -->
             <!-- <v-col class="col-md-4">   -->
                 <div class="images-view-wrap">
@@ -18,39 +17,37 @@
                             </div>
                         </li>
                         <li>
-                        <div class="col-md-2">    
+                        <div class="col-md-2">
                             <div  class="images-view-item">
                                 <img src="https://ae01.alicdn.com/kf/H75e73bcaa60145ce84b0baade309336au/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
                             </div>
-                        </div>    
+                        </div>
                         </li>
                         <li>
-                         <div class="col-md-2">    
+                         <div class="col-md-2">
                             <div class="images-view-item">
                                 <img src="https://ae01.alicdn.com/kf/H8cdd5841b36c47f0969d2e4c678a26411/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
                             </div>
-                        </div>    
+                        </div>
                         </li>
                         <li>
-                        <div class="col-md-2">     
+                        <div class="col-md-2">
                             <div class="images-view-item">
                                 <img src="https://ae01.alicdn.com/kf/H75e73bcaa60145ce84b0baade309336au/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
                             </div>
-                        </div>    
+                        </div>
                         </li>
                         <li>
-                        <div class="col-md-2">     
+                        <div class="col-md-2">
                             <div  class="images-view-item">
                                 <img src="https://ae01.alicdn.com/kf/H75e73bcaa60145ce84b0baade309336au/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
                             </div>
-                        </div>    
+                        </div>
                         </li>
                     </ul>
-                </div> 
-            <!-- </v-col> -->
-            <!-- </v-row>    -->
-
-                
+                </div>
+            &lt;!&ndash; </v-col> &ndash;&gt;
+           </v-row>-->    
     </div>
 
 </template>
