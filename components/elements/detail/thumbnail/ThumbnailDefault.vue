@@ -157,7 +157,7 @@ export default {
 // subimage
 
 .ps-product--detail .ps-product__thumbnail .ps-product__variants {
-    max-width: 70px;
+    max-width: 360px;
     flex-basis: 100%;
     padding-right: 10px;
 }

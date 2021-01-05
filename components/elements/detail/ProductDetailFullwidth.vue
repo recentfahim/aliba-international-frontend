@@ -2,54 +2,9 @@
     <div class="ps-product--detail ps-product--fullwidth">
         <div class="ps-product__header">
             <thumbnail-default :product="product" />
-
             <information-default :product="product" />
         </div>
-            <!-- <default-description />-->
-            <!-- <v-row >      -->
-            <!-- <v-col class="col-md-4">   -->
-                <div class="images-view-wrap">
-                    <ul class="images-view-list">
-                        <li class="active">
-                            <div class="images-view-item">
-                                <img src="https://ae01.alicdn.com/kf/H858d4c1fd2694c658274f932b19fa4e2Q/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp" data-spm-anchor-id="a2g0o.detail.1000017.i0.62e76a26ItUPoN">
-                                    </span>
-                            </div>
-                        </li>
-                        <li>
-                        <div class="col-md-2">
-                            <div  class="images-view-item">
-                                <img src="https://ae01.alicdn.com/kf/H75e73bcaa60145ce84b0baade309336au/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                         <div class="col-md-2">
-                            <div class="images-view-item">
-                                <img src="https://ae01.alicdn.com/kf/H8cdd5841b36c47f0969d2e4c678a26411/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="col-md-2">
-                            <div class="images-view-item">
-                                <img src="https://ae01.alicdn.com/kf/H75e73bcaa60145ce84b0baade309336au/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="col-md-2">
-                            <div  class="images-view-item">
-                                <img src="https://ae01.alicdn.com/kf/H75e73bcaa60145ce84b0baade309336au/KINGSEVEN-Aluminum-Men-s-Sunglasses-Polarized-Lens-Brand-Design-Temples-Sun-glasses-Coating-Mirror-Glasses-Oculos.jpg_50x50.jpg_.webp">
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            &lt;!&ndash; </v-col> &ndash;&gt;
-           </v-row>-->    
     </div>
-
 </template>
 
 <script>
