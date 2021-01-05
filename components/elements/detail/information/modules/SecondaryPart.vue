@@ -3,14 +3,14 @@
     <div class="store-info">
       <div class="store-info-top notranslate">
         <div class="shop-name" data-spm="100005" data-spm-max-idx="1">
-          <a target="_blank" rel="noopener noreferrer" href="//www.aliexpress.com/store/2847021" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="view_my_store" ae_object_type="product" ae_object_value="32853864924" st_page_id="qivtghihqkcaxazs176add9def514432877a114aae" data-aplus-clk="x41_2822446c" data-spm-anchor-id="a2g0o.detail.100005.1">
+          <a target="_blank" rel="noopener noreferrer" href="#">
             Beidao Glasses Store
           </a>
         </div>
       </div>
-      <div class="store-info-content" data-spm="100005" data-spm-max-idx="3">
+      <div class="store-info-content">
         <div class="top-seller-label">
-          <a href="//sale.aliexpress.com/topbrand.htm" rel="noopener noreferrer" target="_blank" data-spm-anchor-id="a2g0o.detail.100005.1">
+          <a href="#">
           <svg id="icon-topseller" viewBox="0 0 1024 1024">
             <path d="M341.333333 512v426.666667l170.666667-128 170.666667 128V512z" fill="#E64A33">
             </path>
@@ -35,7 +35,7 @@
         </div>
         <div class="store-info-contact">
           <div class="contact-block">
-            <a rel="nofollow noopener noreferrer" target="_blank" href="//message.aliexpress.com/message/new.htm?productId=32853864924&amp;messageType=product&amp;memberType=seller&amp;refer=//www.aliexpress.com/item/32853864924.html" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="contact_now" ae_object_type="product" ae_object_value="32853864924" st_page_id="qivtghihqkcaxazs176ae8b0b6d15b27a3cf104775" data-aplus-clk="x42_19e3e081" data-spm-anchor-id="a2g0o.detail.100005.2">
+            <a rel="nofollow noopener noreferrer">
             <svg class="icon-svg img-contact" style="font-size: 16px;">
               <use xlink:href="#icon-contact">
               </use>
@@ -45,20 +45,6 @@
             </a>
           </div>
         </div>
-        <!-- <div class="store-info-btn">
-          <div class="add-store-list follow-btn">
-            <i class="next-icon next-icon-add next-xxs">
-            </i>
-            <span class="asl-btn"> Follow
-            </span>
-          </div>
-          <div class="visit-store-btn">
-            <span>
-              <a target="_blank" rel="noopener noreferrer" href="//www.aliexpress.com/store/2847021" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="left_visit_store" ae_object_type="product" ae_object_value="32853864924" st_page_id="qivtghihqkcaxazs176ae8b0b6d15b27a3cf104775" data-spm-anchor-id="a2g0o.detail.100005.3" data-aplus-clk="x43_1fa4beab">Visit Store
-              </a>
-            </span>
-          </div>
-        </div> -->
       </div>
 
       <div class="instore-info-rcmds">
@@ -132,14 +118,6 @@ export default {
 </script>s
 
 <style  lang="scss" scoped>
-.main[data-v-965ea09e]{
-    // padding: 0;
-    padding: 30px 72px 40px 60px;
-    margin: 0;
-    background-color: #f2f2f2;
-    
-}
-
 .instore-info-container {
     background-color: #fff;
     border-radius: 5px;
@@ -164,7 +142,7 @@ export default {
     width: 100%;
 }
 
-.store-info-top[data-v-60cb112a][data-v-60cb112a] {
+.store-info-top{
     text-align: left;
     margin-bottom: 8px;
     margin-bottom: -26px;
@@ -183,7 +161,7 @@ export default {
 .store-info-top a:active, .store-info-top a:hover, .store-info-top a:link, .store-info-top a:visited {
     color: #333;
 }
-.store-info-content .top-seller-label[data-v-60cb112a][data-v-60cb112a][data-v-60cb112a] {
+.store-info-content .top-seller-label{
     /* left: auto; */
     margin-bottom: 8px;
     display: flex;
@@ -202,10 +180,8 @@ export default {
     vertical-align: bottom;
     font-size: 24px;
 }
-svg[data-v-60cb112a]:not(:root) {
+svg:not(:root) {
     overflow: hidden;
-    /* line-height: 0px; */
-
     overflow: hidden;
 }
 .icon-svg {
@@ -224,7 +200,7 @@ svg[data-v-60cb112a]:not(:root) {
     line-height: 24px;
     width: max-content;
 }
-.store-info-content .store-info-data[data-v-60cb112a][data-v-60cb112a] {
+.store-info-content .store-info-data{
     margin-bottom: 8px;
     font-size: 13px;
     color: #000;
@@ -234,19 +210,19 @@ svg[data-v-60cb112a]:not(:root) {
     word-break: break-word;
     margin-bottom: 4px;
 }
-.store-info-content .store-info-data span.store-info-text[data-v-60cb112a] {
+.store-info-content .store-info-data span.store-info-text {
     display: inline-block;
     text-align: left;
     line-height: 13px;
     color: #999;
     margin: 2px 2px 2px -2px;
 }
-.store-info-content .follower-num[data-v-60cb112a] {
+.store-info-content .follower-num {
     margin-top: 4px;
     margin-bottom: 16px;
     margin: 19px 2px 2px -156px;
 }
-.store-info-content .store-info-contact .contact-block[data-v-60cb112a] {
+.store-info-content .store-info-contact .contact-block {
     height: 18px;
     margin-bottom: 6px;
     margin: 125px 170px 2px -129px;
