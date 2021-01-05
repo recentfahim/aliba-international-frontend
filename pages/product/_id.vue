@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="martfury" v-else>
-    <div class="ps-page--product">
+    <div class="ps-page--product pb-lg-5">
         <div class="ps-container">
             <div class="ps-page__container">
                 <div class="ps-page__left">
@@ -112,5 +112,10 @@ export default {
   padding: 25px;
   margin: 0;
   background-color: #f2f2f2;
+}
+.similar-product{
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 </style>

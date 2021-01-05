@@ -1,11 +1,11 @@
 <template>
   <div>
-          <v-tabs v-model="tab">
-            <v-tabs-slider color="black"></v-tabs-slider>
-            <v-tab class="description-tab-item" key="overview-tab">Overview</v-tab>
-            <v-tab class="description-tab-item" key="review-tab">Customer Reviews</v-tab>
-            <v-tab class="description-tab-item" key="specification-tab">Specifications</v-tab>
-          </v-tabs>
+      <v-tabs v-model="tab">
+        <v-tabs-slider color="black"></v-tabs-slider>
+        <v-tab class="description-tab-item" key="overview-tab">Overview</v-tab>
+        <v-tab class="description-tab-item" key="review-tab">Customer Reviews</v-tab>
+        <v-tab class="description-tab-item" key="specification-tab">Specifications</v-tab>
+      </v-tabs>
 
       <v-tabs-items v-model="tab">
         <v-tab-item key="overview-tab">
