@@ -19,6 +19,24 @@
                         />
                     </div>
                 </div>
+                <div class="ps-page__container">
+                    <!-- <div class="ps-page__left">
+                        <!-- <secondary-part :product="product" v-if="product !== null" /> -->
+                    <!-- </div> -->
+                    <div>
+                            <secondary-part
+                                v-if="product"
+                            />
+                        
+                    </div >
+                    
+                </div>       
+
+                <div class="main">
+                <div class="detail-container container flex">
+
+                </div>
+                </div>
                 <customer-bought
                     v-if="collections !== null"
                     layout="fullwidth"
@@ -44,6 +62,7 @@ import ProductWidgets from '~/components/partials/product/ProductWidgets';
 import LayoutProduct from '~/layouts/layout-product';
 import Newsletters from '~/components/partials/commons/Newsletters';
 import axios from 'axios';
+import SecondaryPart from  '~/components/elements/detail/information/modules/SecondaryPart.vue';
 
 export default {
     layout: 'layout-product',
@@ -55,7 +74,8 @@ export default {
         RelatedProduct,
         CustomerBought,
         BreadCrumb,
-        ProductDetailFullwidth
+        ProductDetailFullwidth,
+        SecondaryPart
     },
 
     computed: {
@@ -116,4 +136,56 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.product-store-banner[data-v-965ea09e][data-v-965ea09e] {
+    overflow: hidden;
+    max-width: 1355px;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 70px;
+    height: 60px;
+}
+.store-banner {
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    background-color: #fff;
+    background-position: 50%;
+    background-size: cover;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+// sidebar
+
+// .detail-container {
+//     max-width: 1200px;
+//     width: 100%;
+//     margin: 0 auto;
+// }
+// .flex {
+//     display: -ms-flexbox;
+//     display: flex;
+// }
+
+// .product-extend .product-extend-sidebar {
+//     max-width: 200px;
+//     width: 100%;
+//     margin-right: 14px;
+//     background-color: blue;
+// }
+
+// second container
+
+.main{
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+</style>

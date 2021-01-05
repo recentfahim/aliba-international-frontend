@@ -1,19 +1,125 @@
-<template>
-    <div class="product-extend" data-spm-anchor-id="a2g0o.detail.0.i7.56e1ab444CK6PG">
-        <div class="store-banner product-store-banner" style="background-image: url(&quot;//ae01.alicdn.com/kf/HTB1wov9bVmWBuNjSspdq6zugXXa4.jpg&quot;);" data-spm-anchor-id="a2g0o.detail.0.i8.56e1ab444CK6PG">
+<template lang="html">
+  <div class="main">
+    <div class="store-info">
+      <div class="store-info-top notranslate">
+        <div class="shop-name" data-spm="100005" data-spm-max-idx="1">
+          <a target="_blank" rel="noopener noreferrer" href="//www.aliexpress.com/store/2847021" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="view_my_store" ae_object_type="product" ae_object_value="32853864924" st_page_id="qivtghihqkcaxazs176add9def514432877a114aae" data-aplus-clk="x41_2822446c" data-spm-anchor-id="a2g0o.detail.100005.1">
+            Beidao Glasses Store
+          </a>
         </div>
-        <div class="detail-fixed-tab" style="display: none;">
-            <div class="detail-container container flex">
-                <div class="fixed-store-info product-extend-sidebar" id="rotate-container">
-                    <div class="store-info-top fixed-store-name notranslate">
-                        <div class="shop-name" data-spm="100005" data-spm-max-idx="1">
-                          <a target="_blank" rel="noopener noreferrer" href="//www.aliexpress.com/store/2847021" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="view_my_store" ae_object_type="product" ae_object_value="4000036855312" st_page_id="qivtghihqkcaxazs1767a6ec57cdaf3b294a847af2" data-aplus-clk="x1_3509dd44" data-spm-anchor-id="a2g0o.detail.100005.1">Beidao Glasses Store</a>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="store-info-content" data-spm="100005" data-spm-max-idx="3">
+        <div class="top-seller-label">
+          <a href="//sale.aliexpress.com/topbrand.htm" rel="noopener noreferrer" target="_blank" data-spm-anchor-id="a2g0o.detail.100005.1">
+          <svg id="icon-topseller" viewBox="0 0 1024 1024">
+            <path d="M341.333333 512v426.666667l170.666667-128 170.666667 128V512z" fill="#E64A33">
+            </path>
+            <path d="M512 384m-277.333333 0a277.333333 277.333333 0 1 0 554.666666 0 277.333333 277.333333 0 1 0-554.666666 0Z" fill="#FAED29">
+            </path>
+            <path d="M512 469.333333l-100.309333 52.736 19.157333-111.701333-81.152-79.104 112.128-16.298667L512 213.333333l50.176 101.632 112.128 16.298667-81.152 79.104 19.2 111.701333z" fill="#BB8C2C">
+            </path>
+          </svg>
+          <span class="top-seller-text">Top Brands
+          </span>
+          </a>
+        </div>
+        <div class="store-info-data">
+            <div class="positive-fdbk">98.5%&nbsp;
+              <span class="store-info-text">Positive Feedback
+              </span>
+            </div>
+            <div class="follower-num">469.2K&nbsp;
+              <span class="store-info-text">Followers
+              </span>
             </div>
         </div>
-    </div>                
+        <div class="store-info-contact">
+          <div class="contact-block">
+            <a rel="nofollow noopener noreferrer" target="_blank" href="//message.aliexpress.com/message/new.htm?productId=32853864924&amp;messageType=product&amp;memberType=seller&amp;refer=//www.aliexpress.com/item/32853864924.html" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="contact_now" ae_object_type="product" ae_object_value="32853864924" st_page_id="qivtghihqkcaxazs176ae8b0b6d15b27a3cf104775" data-aplus-clk="x42_19e3e081" data-spm-anchor-id="a2g0o.detail.100005.2">
+            <svg class="icon-svg img-contact" style="font-size: 16px;">
+              <use xlink:href="#icon-contact">
+              </use>
+            </svg>
+            <span class="contact-text">Contact
+            </span>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="store-info-btn">
+          <div class="add-store-list follow-btn">
+            <i class="next-icon next-icon-add next-xxs">
+            </i>
+            <span class="asl-btn"> Follow
+            </span>
+          </div>
+          <div class="visit-store-btn">
+            <span>
+              <a target="_blank" rel="noopener noreferrer" href="//www.aliexpress.com/store/2847021" clk_trigger="" ae_page_type="detail_page" ae_page_area="store_left" ae_button_type="left_visit_store" ae_object_type="product" ae_object_value="32853864924" st_page_id="qivtghihqkcaxazs176ae8b0b6d15b27a3cf104775" data-spm-anchor-id="a2g0o.detail.100005.3" data-aplus-clk="x43_1fa4beab">Visit Store
+              </a>
+            </span>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="instore-info-rcmds">
+        
+        <div class="simple-card-container" style="width: 108px;">
+          <div class="img-container" style="width: 108px; height: 108px;">
+            <a href="http://localhost:4000/product/abb-521691559512">
+              <img class="simple-card-img" src="https://ae01.alicdn.com/kf/Hec8c60c99fc74489997965ef2ff34626u.jpg_220x220q90.jpg" alt="product-image">
+            </a>
+          </div>
+          <div class="simple-card-price">BDT 966.98
+          </div>
+        </div>
+        <div class="simple-card-container" style="width: 108px;">
+          <div class="img-container" style="width: 108px; height: 108px;">
+            <a href="//www.aliexpress.com/item/4000670522499.html?gps-id=pcDetailBottomMoreThisSeller&amp;scm=1007.13339.169870.0&amp;scm_id=1007.13339.169870.0&amp;scm-url=1007.13339.169870.0&amp;pvid=6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2&amp;_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2,tpp_buckets:668%230%23131923%2337_668%23888%233325%2317_668%232846%238112%231997_668%232717%237564%23680_668%231000022185%231000066058%230_668%233468%2315607%2394">
+            <img class="simple-card-img" src="//ae01.alicdn.com/kf/Hb9de600a67b64a13bc3495a49fb03c3dM.jpg_480x480q90.jpg_.webp" alt="product-image">
+            </a>
+          </div>
+          <div class="simple-card-price">BDT 1,005.15
+          </div>
+        </div>
+        <div class="simple-card-container" style="width: 108px;">
+          <div class="img-container" style="width: 108px; height: 108px;">
+            <a href="//www.aliexpress.com/item/4000670522499.html?gps-id=pcDetailBottomMoreThisSeller&amp;scm=1007.13339.169870.0&amp;scm_id=1007.13339.169870.0&amp;scm-url=1007.13339.169870.0&amp;pvid=6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2&amp;_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2,tpp_buckets:668%230%23131923%2337_668%23888%233325%2317_668%232846%238112%231997_668%232717%237564%23680_668%231000022185%231000066058%230_668%233468%2315607%2394">
+            <img class="simple-card-img" src="//ae01.alicdn.com/kf/Hb9de600a67b64a13bc3495a49fb03c3dM.jpg_480x480q90.jpg_.webp" alt="product-image">
+            </a>
+          </div>
+          <div class="simple-card-price">BDT 1,034.84
+          </div>
+        </div>
+        <div class="simple-card-container" style="width: 108px;">
+          <div class="img-container" style="width: 108px; height: 108px;">
+            <a href="//www.aliexpress.com/item/4000670522499.html?gps-id=pcDetailBottomMoreThisSeller&amp;scm=1007.13339.169870.0&amp;scm_id=1007.13339.169870.0&amp;scm-url=1007.13339.169870.0&amp;pvid=6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2&amp;_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2,tpp_buckets:668%230%23131923%2337_668%23888%233325%2317_668%232846%238112%231997_668%232717%237564%23680_668%231000022185%231000066058%230_668%233468%2315607%2394">
+            <img class="simple-card-img" src="//ae01.alicdn.com/kf/Hd4907de1c7b34a5ba9a4beece3286735K.jpg_480x480q90.jpg_.webp" alt="product-image">
+            </a>
+          </div>
+          <div class="simple-card-price">BDT 810.91
+          </div>
+        </div>
+        <div class="simple-card-container" style="width: 108px;">
+          <div class="img-container" style="width: 108px; height: 108px;">
+            <a href="//www.aliexpress.com/item/4000670522499.html?gps-id=pcDetailBottomMoreThisSeller&amp;scm=1007.13339.169870.0&amp;scm_id=1007.13339.169870.0&amp;scm-url=1007.13339.169870.0&amp;pvid=6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2&amp;_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2,tpp_buckets:668%230%23131923%2337_668%23888%233325%2317_668%232846%238112%231997_668%232717%237564%23680_668%231000022185%231000066058%230_668%233468%2315607%2394">
+            <img class="simple-card-img" src="//ae01.alicdn.com/kf/HTB1gfbFPpXXXXc1XVXXq6xXFXXXz.jpg_480x480q90.jpg_.webp" alt="product-image">
+            </a>
+          </div>
+          <div class="simple-card-price">BDT 296.88
+          </div>
+        </div>
+        <div class="simple-card-container" style="width: 108px;">
+          <div class="img-container" style="width: 108px; height: 108px;">
+            <a href="//www.aliexpress.com/item/4000670522499.html?gps-id=pcDetailBottomMoreThisSeller&amp;scm=1007.13339.169870.0&amp;scm_id=1007.13339.169870.0&amp;scm-url=1007.13339.169870.0&amp;pvid=6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2&amp;_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:6aaa400b-a38f-4b4d-bb47-1d9364e4c3a2,tpp_buckets:668%230%23131923%2337_668%23888%233325%2317_668%232846%238112%231997_668%232717%237564%23680_668%231000022185%231000066058%230_668%233468%2315607%2394">
+            <img class="simple-card-img" src="//ae01.alicdn.com/kf/H1b645e59225946b79f7eeefcc466fbd7u.jpg_480x480q90.jpg_.webp" alt="product-image">
+            </a>
+          </div>
+          <div class="simple-card-price">BDT 770.20
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>        
 </template>
 
 <script>
@@ -23,8 +129,181 @@ export default {
 //   components: { Rating },
 
 }
-</script>
+</script>s
 
-<style>
+<style  lang="scss" scoped>
+.main[data-v-965ea09e]{
+    // padding: 0;
+    padding: 30px 72px 40px 60px;
+    margin: 0;
+    background-color: #f2f2f2;
+    
+}
 
+.instore-info-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 4px 20px 0 0;
+    margin-bottom: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.store-info {
+    position: relative;
+    background-color: #fff;
+    width: 200px;
+    border-radius: 5px;
+    padding: 16px 12px 12px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.store-info-top[data-v-60cb112a][data-v-60cb112a] {
+    text-align: left;
+    margin-bottom: 8px;
+    margin-bottom: -26px;
+    padding: 15px 2px 2px 15px;
+}
+.store-info-top .shop-name {
+    display: inline-block;
+    line-height: 19px;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.store-info-top a:active, .store-info-top a:hover, .store-info-top a:link, .store-info-top a:visited {
+    color: #333;
+}
+.store-info-content .top-seller-label[data-v-60cb112a][data-v-60cb112a][data-v-60cb112a] {
+    /* left: auto; */
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+    margin: 4px 20px 45px -146px;
+    width: 21px;
+    text-align: left;
+}
+
+
+.store-info-content .top-seller-label a {
+    color: #000;
+}
+.store-info-content .top-seller-icon {
+    vertical-align: bottom;
+    font-size: 24px;
+}
+svg[data-v-60cb112a]:not(:root) {
+    overflow: hidden;
+    /* line-height: 0px; */
+
+    overflow: hidden;
+}
+.icon-svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.15em;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 24px;
+}
+[data-v-60cb112a]:not(svg) {
+    transform-origin: 0px 0px;
+    display: flex;
+}
+.store-info-content .top-seller-text {
+    line-height: 24px;
+    width: max-content;
+}
+.store-info-content .store-info-data[data-v-60cb112a][data-v-60cb112a] {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #000;
+    margin: 65px 2px 2px -40px;
+}
+.store-info-content .positive-fdbk {
+    word-break: break-word;
+    margin-bottom: 4px;
+}
+.store-info-content .store-info-data span.store-info-text[data-v-60cb112a] {
+    display: inline-block;
+    text-align: left;
+    line-height: 13px;
+    color: #999;
+    margin: 2px 2px 2px -2px;
+}
+.store-info-content .follower-num[data-v-60cb112a] {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    margin: 19px 2px 2px -156px;
+}
+.store-info-content .store-info-contact .contact-block[data-v-60cb112a] {
+    height: 18px;
+    margin-bottom: 6px;
+    margin: 125px 170px 2px -129px;
+}
+.store-info-content .store-info-contact a {
+    color: #2e9cc3;
+}
+.store-info-content .store-info-contact .contact-text {
+    line-height: 18px;
+    display: inline-block;
+}
+
+.instore-info-container .instore-info-rcmds {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-top: 16px;
+}
+.instore-info-container .instore-info-rcmds div {
+    margin-right: 16px;
+    width: 108px;
+    height: 108px;
+}
+.simple-card-container {
+    text-align: center;
+    position: relative;
+}
+.simple-card-container .img-container {
+    position: relative;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 107px;
+    height: 108px;
+}
+a:visited {
+    color: #fff;
+}
+.simple-card-container .simple-card-img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.simple-card-container .simple-card-price {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
 </style>
