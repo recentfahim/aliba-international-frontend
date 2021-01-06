@@ -6,50 +6,30 @@
       </div>
     </div>
   </div>
-    <div class="martfury" v-else>
-        <div class="ps-page--product">
-            <div class="ps-container">
-                <div class="ps-page__container">
-                    <div class="ps-page__left">
-                        <product-detail-fullwidth :product="product" v-if="product !== null" />
-                    </div>
-                    <div class="ps-page__right">
-                        <product-widgets
-                            v-if="product"
-                        />
-                    </div>
+  <div class="martfury" v-else>
+    <div class="ps-page--product pb-lg-5">
+        <div class="ps-container">
+            <div class="ps-page__container">
+                <div class="ps-page__left">
+                    <product-detail-fullwidth :product="product" v-if="product !== null" />
                 </div>
-                <div class="ps-page__container">
-                    <!-- <div class="ps-page__left">
-                        <!-- <secondary-part :product="product" v-if="product !== null" /> -->
-                    <!-- </div> -->
-                    <div>
-                            <secondary-part
-                                v-if="product"
-                            />
-                        
-                    </div >
-                    
-                </div>       
-
-                <div class="main">
-                <div class="detail-container container flex">
-
+                <div class="ps-page__right">
+                    <product-widgets
+                        v-if="product" :recommended_item="recommend_for_you"
+                    />
                 </div>
-                </div>
-                <customer-bought
-                    v-if="collections !== null"
-                    layout="fullwidth"
-                    collection-slug="customer_bought"
-                />
-                <related-product
-                    v-if="collections !== null"
-                    layout="fullwidth"
-                    collection-slug="shop-recommend-items"
-                />
             </div>
         </div>
     </div>
+    <div class="similar-product-description-container">
+      <div class="similar-product">
+        <secondary-part v-if="product" :similar_products="similar_product"/>
+      </div>
+      <div class="product-description">
+        <ProductDescription :description="product_description"/>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -60,15 +40,15 @@ import CustomerBought from '~/components/partials/product/CustomerBought';
 import RelatedProduct from '~/components/partials/product/RelatedProduct';
 import ProductWidgets from '~/components/partials/product/ProductWidgets';
 import LayoutProduct from '~/layouts/layout-product';
-import Newsletters from '~/components/partials/commons/Newsletters';
 import axios from 'axios';
 import SecondaryPart from  '~/components/elements/detail/information/modules/SecondaryPart.vue';
+import ProductDescription from '~/components/product/ProductDescription';
 
 export default {
     layout: 'layout-product',
     transition: 'zoom',
     components: {
-        Newsletters,
+      ProductDescription,
         LayoutProduct,
         ProductWidgets,
         RelatedProduct,
@@ -88,47 +68,19 @@ export default {
             productId: this.$route.params.id,
             breadCrumb: null,
             pageLoading: true,
-            product: ''
+            product: '',
+            product_description: null,
+            recommend_for_you: null,
+            similar_product: null
         };
     },
-    /*async created() {
-        const queries = [
-            'customer_bought',
-            'shop-recommend-items',
-            'widget_same_brand'
-        ];
-        setTimeout(
-            function() {
-                this.pageLoading = false;
-            }.bind(this),
-            2000
-        );
-        const collections = await this.$store.dispatch(
-            'collection/getCollectionsBySlugs',
-            queries
-        );
-        const product = await this.$store.dispatch(
-            'product/getProductsById',
-            this.productId
-        );
-        this.breadCrumb = [
-            {
-                text: 'Home',
-                url: '/'
-            },
-            {
-                text: 'Shop',
-                url: '/shop'
-            },
-            {
-                text: product.title
-            }
-        ];
-    },*/
     mounted() {
         let product_id = this.$route.params.id
         axios.get(`${process.env.baseURL}single-product/${product_id}`).then((response) => {
             this.product = response.data.data
+            this.product_description = response.data.description
+            this.recommend_for_you = response.data.related_product.slice(0, 3);
+            this.similar_product = response.data.related_product.slice(3, 9);
             this.pageLoading = false
         })
         this.$store.commit('app/setAppDrawer', false);
@@ -138,7 +90,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.product-store-banner[data-v-965ea09e][data-v-965ea09e] {
+.product-store-banner {
     overflow: hidden;
     max-width: 1355px;
     width: 100%;
@@ -160,32 +112,14 @@ export default {
     -ms-flex-pack: center;
     justify-content: center;
 }
-
-// sidebar
-
-// .detail-container {
-//     max-width: 1200px;
-//     width: 100%;
-//     margin: 0 auto;
-// }
-// .flex {
-//     display: -ms-flexbox;
-//     display: flex;
-// }
-
-// .product-extend .product-extend-sidebar {
-//     max-width: 200px;
-//     width: 100%;
-//     margin-right: 14px;
-//     background-color: blue;
-// }
-
-// second container
-
-.main{
-    padding: 0;
-    margin: 0;
-    background-color: #f2f2f2;
+.similar-product-description-container{
+  padding: 25px;
+  margin: 0;
+  background-color: #f2f2f2;
 }
-
+.similar-product{
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
 </style>
