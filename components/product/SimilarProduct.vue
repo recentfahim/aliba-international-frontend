@@ -1,12 +1,12 @@
 <template>
   <div class="col-md-2 col-sm-3 col-6">
     <div class="product-grid">
-      <nuxt-link to="#">
+      <nuxt-link :to="`/product/${item.id}`">
         <div class="product-image-container">
-          <img class="product-image" src="https://ae01.alicdn.com/kf/Hec8c60c99fc74489997965ef2ff34626u.jpg_220x220q90.jpg">
+          <img class="product-image" :src="item.image">
         </div>
         <div class="product-price">
-          BDT 305
+          BDT {{ item.price }}
         </div>
       </nuxt-link>
     </div>
@@ -15,7 +15,8 @@
 
 <script>
 export default {
-  name: 'SimilarProduct'
+  name: 'SimilarProduct',
+  props: ['item']
 };
 </script>
 
@@ -37,5 +38,6 @@ export default {
 }
 .product-image{
   padding: 10px;
+  height: 190px;
 }
 </style>

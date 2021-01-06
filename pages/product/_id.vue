@@ -15,7 +15,7 @@
                 </div>
                 <div class="ps-page__right">
                     <product-widgets
-                        v-if="product"
+                        v-if="product" :recommended_item="recommend_for_you"
                     />
                 </div>
             </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="similar-product-description-container">
       <div class="similar-product">
-        <secondary-part v-if="product"/>
+        <secondary-part v-if="product" :similar_products="similar_product"/>
       </div>
       <div class="product-description">
         <ProductDescription :description="product_description"/>
@@ -69,7 +69,9 @@ export default {
             breadCrumb: null,
             pageLoading: true,
             product: '',
-            product_description: null
+            product_description: null,
+            recommend_for_you: null,
+            similar_product: null
         };
     },
     mounted() {
@@ -77,6 +79,8 @@ export default {
         axios.get(`${process.env.baseURL}single-product/${product_id}`).then((response) => {
             this.product = response.data.data
             this.product_description = response.data.description
+            this.recommend_for_you = response.data.related_product.slice(0, 3);
+            this.similar_product = response.data.related_product.slice(3, 9);
             this.pageLoading = false
         })
         this.$store.commit('app/setAppDrawer', false);

@@ -5,66 +5,18 @@
                 <div class="may-like-title">
                     Recommended For You
                 </div>
-                <div class="simple-card-container" style="width: 135px;">
-                    <div class="img-container" style="width: 135px; height: 135px;">
-                        <a href="#">
-                        <img class="simple-card-img" src="//ae01.alicdn.com/kf/Hec8c60c99fc74489997965ef2ff34626u.jpg_220x220q90.jpg" alt="product-image">
-                        </a>
+                <div class="recommended_item_container" v-for="(item, index) in recommended_item" :key="index">
+                  <nuxt-link :to="`product/${item.id}`">
+                    <div class="recommended_item">
+                        <img class="recommended_item_image" :src="item.image" alt="product-image">
                     </div>
-                    <div class="simple-card-price">BDT 749.48
+                    <div class="recommended_item_price">
+                      BDT {{ item.price }}
                     </div>
+                  </nuxt-link>
                 </div>
-    
-                <div class="simple-card-container" style="width: 135px;">
-                    <div class="img-container" style="width: 135px; height: 135px;">
-                        <a href="#">
-                        <img class="simple-card-img" src="https://ae01.alicdn.com/kf/H5734e9a657e24a02bbe7cf123f93e541u.jpg_220x220q90.jpg" alt="product-image">
-                        </a>
-                    </div>
-                    <div class="simple-card-price">BDT 1,007.21
-
-                    </div>
-                </div>    
-                
-                <div class="simple-card-container" style="width: 135px;">
-                    <div class="img-container" style="width: 135px; height: 135px;">
-                        <a href="#">
-                        <img class="simple-card-img" src="https://ae01.alicdn.com/kf/H1582d077e3de43c493dccda0110d67d8D.jpg_220x220q90.jpg" alt="product-image">
-                        </a>
-                    </div>
-                    <div class="simple-card-price">BDT 754.50
-                    </div>   
-                </div>               
             </div>
          </aside>
-
-         <aside>
-             <div class="product-fix-sns">
-                <div class="product-fix-wrap">
-                    <div style="visibility: visible;">
-                        <div class="sns-shares">
-                            <span>
-                                 <a href="https://www.facebook.com/sharer/sharer.php?spm=a2g0o.detail.share.1.62e76a26Ov2ZPE&amp;u=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F4000036855312.html%3Fchannel%3Dfacebook">
-                                 </a>
-                            </span>
-                            <span>
-                                 <a href="https://www.facebook.com/sharer/sharer.php?spm=a2g0o.detail.share.1.62e76a26Ov2ZPE&amp;u=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F4000036855312.html%3Fchannel%3Dfacebook">
-                                 </a>
-                            </span>
-                            <span>
-                                 <a href="https://www.facebook.com/sharer/sharer.php?spm=a2g0o.detail.share.1.62e76a26Ov2ZPE&amp;u=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F4000036855312.html%3Fchannel%3Dfacebook">
-                                 </a>
-                            </span>
-                            <span>
-                                 <a href="https://www.facebook.com/sharer/sharer.php?spm=a2g0o.detail.share.1.62e76a26Ov2ZPE&amp;u=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F4000036855312.html%3Fchannel%3Dfacebook">
-                                 </a>
-                            </span>
-                        </div> 
-                        
-                    </div>
-                </div>
-            </div>               
-        </aside>
     </section>
 </template>
 
@@ -75,11 +27,26 @@ import ProductDefault from '~/components/elements/product/ProductDefault';
 
 export default {
     name: 'ProductWidgets',
+    props: ['recommended_item'],
     components: { ProductDefault },
 };
 </script>
 
 <style lang="scss" scoped>
+.recommended_item_container{
+  width: 150px;
+}
+.recommended_item{
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #f2f2f2;
+}
+.recommended_item_price{
+  font-family: OpenSans, Open Sans, Arial, Helvetica, sans-serif, SimSun;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
 
 .may-like {
     -ms-flex-preferred-size: 135px;

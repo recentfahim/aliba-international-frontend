@@ -11,7 +11,7 @@
         </div>
       </v-col>
       <v-col md="10">
-        <SimilarProductContainer/>
+        <SimilarProductContainer :similar_products="similar_products"/>
       </v-col>
     </v-row>
   </div>
@@ -129,7 +129,7 @@ import SimilarProductContainer from '~/components/product/SimilarProductContaine
 export default {
   name: 'SecondaryPart',
   components: { SimilarProductContainer },
-  props: ['product'],
+  props: ['similar_products'],
 //   components: { Rating },
 
 }
