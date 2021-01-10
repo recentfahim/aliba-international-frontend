@@ -84,11 +84,12 @@ export default {
             }
 
             let item = {
+                title: this.product.Title,
                 id: this.product.Id,
                 quantity: this.quantity,
-                price: this.product.Price.ConvertedPriceWithoutSign
+                price: this.product.Price.ConvertedPriceWithoutSign,
+                image: this.product.MainPictureUrl
             };
-            console.log(item)
             if (existItem !== undefined) {
                 if (this.quantity + existItem.quantity > 10) {
                     this.$notify({

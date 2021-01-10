@@ -1,11 +1,9 @@
 <template lang="html">
     <section class="ps-page--my-account">
-        <bread-crumb :breadcrumb="breadCrumb" />
         <user-information />
     </section>
 </template>
 <script>
-import BreadCrumb from '~/components/elements/BreadCrumb';
 import UserInformation from '~/components/partials/account/UserInformation';
 import HeaderMobile from '~/components/shared/mobile/HeaderMobile';
 
@@ -14,20 +12,10 @@ export default {
     transition: 'zoom',
     components: {
         HeaderMobile,
-        UserInformation,
-        BreadCrumb
+        UserInformation
     },
     data: () => {
         return {
-            breadCrumb: [
-                {
-                    text: 'Home',
-                    url: '/'
-                },
-                {
-                    text: 'User Information'
-                }
-            ]
         };
     }
 };
