@@ -22,11 +22,27 @@
 <script>
 export default {
     name: 'AccountLinks',
-    props: {
-        links: {
-            type: Array,
-            default: () => []
-        }
+    data() {
+      return {
+        links: [
+          {
+            text: 'Account Information',
+            url: '/account/my-profile',
+            icon: 'icon-user',
+            active: true
+          },
+          {
+            text: 'Orders',
+            url: '/account/orders',
+            icon: 'icon-store'
+          },
+          {
+            text: 'Address',
+            url: '/account/addresses',
+            icon: 'icon-map-marker'
+          }
+        ]
+      }
     }
 };
 </script>

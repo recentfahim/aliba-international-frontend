@@ -39,7 +39,7 @@
 import AccountLinks from './modules/AccountLinks';
 import TableInvoices from './modules/TableInvoices';
 export default {
-    name: 'InvoiceDetail',
+    name: 'OrderDetail',
     components: { TableInvoices, AccountLinks },
     data() {
         return {
@@ -50,25 +50,14 @@ export default {
                     icon: 'icon-user'
                 },
                 {
-                    text: 'Notifications',
+                    text: 'Orders',
                     url: '/account/notifications',
                     icon: 'icon-alarm-ringing'
-                },
-                {
-                    text: 'Invoices',
-                    url: '/account/invoices',
-                    icon: 'icon-papers',
-                    active: true
                 },
                 {
                     text: 'Address',
                     url: '/account/addresses',
                     icon: 'icon-map-marker'
-                },
-                {
-                    text: 'Recent Viewed Product',
-                    url: '/account/recent-viewed-product',
-                    icon: 'icon-store'
                 },
                 {
                     text: 'Wishlist',
@@ -81,4 +70,21 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-my-account{
+  padding-top: 30px;
+}
+.ps-section__left{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.ps-section__content{
+  border-radius: 10px;
+}
+.ps-page__content{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>

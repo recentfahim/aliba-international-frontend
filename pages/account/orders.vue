@@ -1,13 +1,11 @@
 <template lang="html">
     <section class="ps-page--my-account">
-        <bread-crumb :breadcrumb="breadCrumb" />
-        <invoices />
+        <orders />
     </section>
 </template>
 
 <script>
-import BreadCrumb from '~/components/elements/BreadCrumb';
-import Invoices from '~/components/partials/account/Invoices';
+import Orders from '~/components/partials/account/Orders';
 import HeaderMobile from '~/components/shared/mobile/HeaderMobile';
 
 export default {
@@ -15,8 +13,7 @@ export default {
     middleware: 'authentication',
     components: {
         HeaderMobile,
-        Invoices,
-        BreadCrumb
+        Orders,
     },
     data: () => {
         return {
