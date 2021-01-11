@@ -17,15 +17,6 @@ export default {
     },
     data: () => {
         return {
-            breadCrumb: [
-                {
-                    text: 'Home',
-                    url: '/'
-                },
-                {
-                    text: 'Invoices'
-                }
-            ]
         };
     }
 };

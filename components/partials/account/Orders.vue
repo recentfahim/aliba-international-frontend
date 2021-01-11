@@ -13,7 +13,7 @@
                                 </figure>
                             </div>
                             <div class="ps-widget__content">
-                                <AccountLinks :links="accountLinks" />
+                                <AccountLinks />
                             </div>
                         </aside>
                     </div>
@@ -38,33 +38,12 @@
 <script>
 import AccountLinks from './modules/AccountLinks';
 import TableInvoices from './modules/TableInvoices';
+
 export default {
     name: 'OrderDetail',
     components: { TableInvoices, AccountLinks },
     data() {
         return {
-            accountLinks: [
-                {
-                    text: 'Account Information',
-                    url: '/account/user-information',
-                    icon: 'icon-user'
-                },
-                {
-                    text: 'Orders',
-                    url: '/account/notifications',
-                    icon: 'icon-alarm-ringing'
-                },
-                {
-                    text: 'Address',
-                    url: '/account/addresses',
-                    icon: 'icon-map-marker'
-                },
-                {
-                    text: 'Wishlist',
-                    url: '/account/wishlist',
-                    icon: 'icon-heart'
-                }
-            ]
         };
     }
 };
