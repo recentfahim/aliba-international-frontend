@@ -10,7 +10,7 @@ import HeaderMobile from '~/components/shared/mobile/HeaderMobile';
 
 export default {
     transition: 'zoom',
-    middleware: 'authentication',
+    // middleware: 'authentication',
     components: {
         HeaderMobile,
         Orders,

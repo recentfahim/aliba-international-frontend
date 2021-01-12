@@ -12,7 +12,7 @@ export default {
         Addresses,
     },
     transition: 'zoom',
-    middleware: 'authentication',
+    // middleware: 'authentication',
     data: () => {
         return {
         };

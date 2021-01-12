@@ -9,7 +9,7 @@ import InvoiceDetail from '~/components/partials/account/InvoiceDetail';
 
 export default {
     transition: 'zoom',
-    middleware: 'authentication',
+    // middleware: 'authentication',
     components: {
         InvoiceDetail,
     },
