@@ -6,8 +6,7 @@
                 <header-mobile />
                 <nuxt></nuxt>
                 <notify />
-                <newsletters />
-                <footer-default />
+              <footer-fullwidth />
                 <navigation-list />
                 <mobile-drawer />
             </v-main>
@@ -23,8 +22,10 @@ import HeaderDefault from '~/components/shared/headers/HeaderDefault';
 import HeaderMobile from '~/components/shared/mobile/HeaderMobile';
 import Newsletters from '~/components/partials/commons/Newsletters';
 import FooterDefault from '~/components/shared/footers/FooterDefault';
+import FooterFullwidth from '~/components/shared/footers/FooterFullwidth';
+
 export default {
-    components: { FooterDefault, Newsletters, HeaderMobile, HeaderDefault, MobileDrawer, NavigationList, Notify }
+    components: { FooterDefault, Newsletters, HeaderMobile, HeaderDefault, MobileDrawer, NavigationList, Notify, FooterFullwidth }
 };
 </script>
 
