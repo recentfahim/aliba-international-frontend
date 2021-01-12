@@ -77,6 +77,7 @@ export const mutations = {
 export const actions = {
     addProductToCart({ commit, state }, payload) {
         commit('addItem', payload);
+        console.log(payload)
         const cookieParams = {
             total: state.total,
             amount: state.amount,

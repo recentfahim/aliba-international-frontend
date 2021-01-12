@@ -13,9 +13,9 @@
                 <td>
                     <ProductCart :product="product" />
                 </td>
-                <td class="price">$ {{ product.price }}</td>
+                <td class="price">{{ product.price }}</td>
                 <td>1</td>
-                <td class="price">$ {{ product.price }}</td>
+                <td class="price">{{ product.price }}</td>
             </tr>
         </tbody>
     </table>

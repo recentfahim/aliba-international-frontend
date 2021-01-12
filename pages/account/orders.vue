@@ -1,17 +1,19 @@
 <template lang="html">
     <section class="ps-page--my-account">
-        <invoice-detail />
+        <orders />
     </section>
 </template>
 
 <script>
-import InvoiceDetail from '~/components/partials/account/InvoiceDetail';
+import Orders from '~/components/partials/account/Orders';
+import HeaderMobile from '~/components/shared/mobile/HeaderMobile';
 
 export default {
     transition: 'zoom',
     // middleware: 'authentication',
     components: {
-        InvoiceDetail,
+        HeaderMobile,
+        Orders,
     },
     data: () => {
         return {

@@ -1,9 +1,10 @@
 <template lang="html">
     <div class="ps-product--cart-mobile">
         <div class="ps-product__thumbnail">
+          {{product}}
             <nuxt-link :to="`/product/${product.id}`">
                 <img
-                    :src="`${baseUrl}${product.thumbnail.url}`"
+                    :src="product.image"
                     alt="martfury"
                 />
             </nuxt-link>

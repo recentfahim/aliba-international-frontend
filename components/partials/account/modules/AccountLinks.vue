@@ -9,7 +9,7 @@
             </li>
         </template>
         <li>
-            <nuxt-link to="/account/my-account">
+            <nuxt-link to="/account/my-profile">
                 <a>
                     <i class="icon-power-switch"></i>
                     Logout
@@ -22,11 +22,10 @@
 <script>
 export default {
     name: 'AccountLinks',
-    props: {
-        links: {
-            type: Array,
-            default: () => []
-        }
+    props: ['links'],
+    data() {
+      return {
+      }
     }
 };
 </script>

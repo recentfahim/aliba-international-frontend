@@ -22,7 +22,7 @@
             <div class="ps-cart__footer">
                 <h3>
                     {{ $t('header.miniCart.subTotal') }}
-                    <strong>${{ amount }}</strong>
+                    <strong>BDT {{ amount }}</strong>
                 </h3>
                 <figure>
                     <div>

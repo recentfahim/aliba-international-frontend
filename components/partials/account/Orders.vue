@@ -13,7 +13,7 @@
                                 </figure>
                             </div>
                             <div class="ps-widget__content">
-                                <AccountLinks :links="accountLinks" />
+                                <AccountLinks :links="links" />
                             </div>
                         </aside>
                     </div>
@@ -22,7 +22,7 @@
                     <div class="ps-page__content">
                         <div class="ps-section--account-setting">
                             <div class="ps-section__header">
-                                <h3>Invoices</h3>
+                                <h3>Orders</h3>
                             </div>
                             <div class="ps-section__content">
                                 <TableInvoices />
@@ -38,47 +38,50 @@
 <script>
 import AccountLinks from './modules/AccountLinks';
 import TableInvoices from './modules/TableInvoices';
+
 export default {
-    name: 'InvoiceDetail',
+    name: 'OrderDetail',
     components: { TableInvoices, AccountLinks },
     data() {
         return {
-            accountLinks: [
-                {
-                    text: 'Account Information',
-                    url: '/account/user-information',
-                    icon: 'icon-user'
-                },
-                {
-                    text: 'Notifications',
-                    url: '/account/notifications',
-                    icon: 'icon-alarm-ringing'
-                },
-                {
-                    text: 'Invoices',
-                    url: '/account/invoices',
-                    icon: 'icon-papers',
-                    active: true
-                },
-                {
-                    text: 'Address',
-                    url: '/account/addresses',
-                    icon: 'icon-map-marker'
-                },
-                {
-                    text: 'Recent Viewed Product',
-                    url: '/account/recent-viewed-product',
-                    icon: 'icon-store'
-                },
-                {
-                    text: 'Wishlist',
-                    url: '/account/wishlist',
-                    icon: 'icon-heart'
-                }
-            ]
+          links: [
+            {
+              text: 'Account Information',
+              url: '/account/my-profile',
+              icon: 'icon-user'
+            },
+            {
+              text: 'Orders',
+              url: '/account/orders',
+              icon: 'icon-store',
+              active: true
+            },
+            {
+              text: 'Address',
+              url: '/account/addresses',
+              icon: 'icon-map-marker'
+            }
+          ]
         };
     }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-my-account{
+  padding-top: 30px;
+}
+.ps-section__left{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.ps-section__content{
+  border-radius: 10px;
+}
+.ps-page__content{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>

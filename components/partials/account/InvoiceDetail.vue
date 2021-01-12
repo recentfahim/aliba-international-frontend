@@ -13,7 +13,7 @@
                                 </figure>
                             </div>
                             <div class="ps-widget__content">
-                                <AccountLinks :links="accountLinks" />
+                                <AccountLinks :links="links" />
                             </div>
                         </aside>
                     </div>
@@ -22,8 +22,8 @@
                     <div class="ps-section--account-setting">
                         <div class="ps-section__header">
                             <h3>
-                                Invoice #500884010 -
-                                <strong>Successful delivery</strong>
+                                Order No: #854 -
+                                <strong>Delivered</strong>
                             </h3>
                         </div>
                         <div class="ps-section__content">
@@ -35,14 +35,13 @@
                                         </figcaption>
                                         <div class="ps-block__content">
                                             <strong>
-                                                John Walker
+                                                User Name
                                             </strong>
                                             <p>
-                                                Address: 3481 Poe Lane,
-                                                Westphalia, Kansas
+                                                Address: Banani, Dhaka-1213
                                             </p>
                                             <p>
-                                                Phone: 913-489-1853
+                                                Phone: 016582156142
                                             </p>
                                         </div>
                                     </figure>
@@ -54,7 +53,7 @@
                                         </figcaption>
                                         <div class="ps-block__content">
                                             <p>
-                                                Shipping Fee: Free
+                                                Shipping Fee: 100
                                             </p>
                                         </div>
                                     </figure>
@@ -77,7 +76,7 @@
                             </div>
                             <nuxt-link to="/account/invoices">
                                 <a class="ps-btn ps-btn--sm ">
-                                    Back to invoices
+                                    Back to orders
                                 </a>
                             </nuxt-link>
                         </div>
@@ -96,39 +95,24 @@ export default {
     components: { TableInvoice, AccountLinks },
     data() {
         return {
-            accountLinks: [
-                {
-                    text: 'Account Information',
-                    url: '/account/user-information',
-                    icon: 'icon-user'
-                },
-                {
-                    text: 'Notifications',
-                    url: '/account/notifications',
-                    icon: 'icon-alarm-ringing'
-                },
-                {
-                    text: 'Invoices',
-                    url: '/account/invoices',
-                    icon: 'icon-papers',
-                    active: true
-                },
-                {
-                    text: 'Address',
-                    url: '/account/addresses',
-                    icon: 'icon-map-marker'
-                },
-                {
-                    text: 'Recent Viewed Product',
-                    url: '/account/recent-viewed-product',
-                    icon: 'icon-store'
-                },
-                {
-                    text: 'Wishlist',
-                    url: '/account/wishlist',
-                    icon: 'icon-heart'
-                }
-            ],
+          links: [
+            {
+              text: 'Account Information',
+              url: '/account/my-profile',
+              icon: 'icon-user'
+            },
+            {
+              text: 'Orders',
+              url: '/account/orders',
+              icon: 'icon-store',
+              active: true
+            },
+            {
+              text: 'Address',
+              url: '/account/addresses',
+              icon: 'icon-map-marker'
+            }
+          ],
             invoiceProducts: [
                 {
                     id: '6',
@@ -170,4 +154,21 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-section--account-setting{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.ps-my-account{
+  padding-top: 30px;
+}
+.ps-section__left{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.ps-section__content{
+  border-radius: 10px;
+}
+</style>
