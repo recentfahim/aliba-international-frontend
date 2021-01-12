@@ -13,7 +13,7 @@
                                 </figure>
                             </div>
                             <div class="ps-widget__content">
-                                <AccountLinks />
+                                <AccountLinks :links="links"/>
                             </div>
                         </aside>
                     </div>
@@ -111,7 +111,25 @@ export default {
           sex: null,
           mobile_number: null,
           email: null,
-          edit_enable: false
+          edit_enable: false,
+          links: [
+            {
+              text: 'Account Information',
+              url: '/account/my-profile',
+              icon: 'icon-user',
+              active: true
+            },
+            {
+              text: 'Orders',
+              url: '/account/orders',
+              icon: 'icon-store'
+            },
+            {
+              text: 'Address',
+              url: '/account/addresses',
+              icon: 'icon-map-marker'
+            }
+          ]
         };
     },
     methods: {

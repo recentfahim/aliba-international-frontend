@@ -3,24 +3,31 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
+                    <th scope="col">Order Number</th>
+                    <th scope="col">Order Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Payment Status</th>
+                    <th scope="col">Order StatusStatus</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in tableData" :key="item.id">
+                <tr v-for="item in tableData" :key="item.order_id">
                     <td>
-                        <nuxt-link to="/account/invoice-detail">{{
-                            item.invoiceId
-                        }}</nuxt-link>
+                        <nuxt-link to="/account/invoice-detail">{{ item.order_id }}</nuxt-link>
                     </td>
-                    <td>{{ item.title }}</td>
-                    <td>{{ item.dateCreate }}</td>
-                    <td>${{ item.amount }}</td>
-                    <td>{{ item.status }}</td>
+                    <td>{{ item.order_date }}</td>
+                    <td>{{ item.amount }}</td>
+                    <td>
+                      <span v-if="item.payment_status === 'Paid'" class="badge badge-pill badge-success">{{ item.payment_status }}</span>
+                      <span v-else class="badge badge-pill badge-danger">{{ item.payment_status }}</span>
+                    </td>
+                    <td>
+                      <span v-if="item.order_status === 'Delivered'" class="badge badge-pill badge-success">{{ item.order_status }}</span>
+                      <span v-else-if="item.order_status === 'Canceled'" class="badge badge-pill badge-danger">{{ item.order_status }}</span>
+                      <span v-else-if="item.order_status === 'Shipped'" class="badge badge-pill badge-primary">{{ item.order_status }}</span>
+                      <span v-else-if="item.order_status === 'Processing'" class="badge badge-pill badge-info">{{ item.order_status }}</span>
+                      <span v-else class="badge badge-pill badge-warning">{{ item.order_status }}</span>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -34,37 +41,48 @@ export default {
         return {
             tableData: [
                 {
-                    id: '1',
-                    invoiceId: '500884010',
-                    title: 'Marshall Kilburn Portable Wireless Speaker',
-                    dateCreate: '20-1-2020',
-                    amount: '42.99',
-                    status: 'Successful delivery'
+                  order_id: '50',
+                  order_date: '21-01-2021',
+                  amount: '42.99',
+                  payment_status: 'Paid',
+                  order_status: 'Delivered'
                 },
                 {
-                    id: '2',
-                    invoiceId: '593347935',
-                    title: 'Herschel Leather Duffle Bag In Brown Color',
-                    dateCreate: '20-1-2020',
-                    amount: '199.99',
-                    status: 'Cancel'
+                  order_id: '268',
+                  order_date: '21-01-2021',
+                  amount: '42.99',
+                  payment_status: 'Paid',
+                  order_status: 'Processing'
                 },
                 {
-                    id: '3',
-                    invoiceId: '593347935',
-                    title: 'Xbox One Wireless Controller Black Color',
-                    dateCreate: '20-1-2020',
-                    amount: '199.99',
-                    status: 'Cancel'
+                  order_id: '522',
+                  order_date: '21-01-2021',
+                  amount: '42.99',
+                  payment_status: 'Canceled',
+                  order_status: 'Shipped'
                 },
                 {
-                    id: '4',
-                    invoiceId: '615397400',
-                    title: 'Grand Slam Indoor Of Show Jumping Novel',
-                    dateCreate: '20-1-2020',
-                    amount: '41.00',
-                    status: 'Cancel'
-                }
+                  order_id: '625',
+                  order_date: '21-01-2021',
+                  amount: '42.99',
+                  payment_status: 'Canceled',
+                  order_status: 'Shipping to Bangladesh'
+                },
+                {
+                  order_id: '685',
+                  order_date: '21-01-2021',
+                  amount: '42.99',
+                  payment_status: 'Paid',
+                  order_status: 'Delivered'
+                },
+                {
+                  order_id: '785',
+                  order_date: '21-01-2021',
+                  amount: '42.99',
+                  payment_status: 'Canceled',
+                  order_status: 'Canceled'
+                },
+
             ]
         };
     }

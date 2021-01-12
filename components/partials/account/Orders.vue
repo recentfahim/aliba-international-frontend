@@ -13,7 +13,7 @@
                                 </figure>
                             </div>
                             <div class="ps-widget__content">
-                                <AccountLinks />
+                                <AccountLinks :links="links" />
                             </div>
                         </aside>
                     </div>
@@ -22,7 +22,7 @@
                     <div class="ps-page__content">
                         <div class="ps-section--account-setting">
                             <div class="ps-section__header">
-                                <h3>Invoices</h3>
+                                <h3>Orders</h3>
                             </div>
                             <div class="ps-section__content">
                                 <TableInvoices />
@@ -44,6 +44,24 @@ export default {
     components: { TableInvoices, AccountLinks },
     data() {
         return {
+          links: [
+            {
+              text: 'Account Information',
+              url: '/account/my-profile',
+              icon: 'icon-user'
+            },
+            {
+              text: 'Orders',
+              url: '/account/orders',
+              icon: 'icon-store',
+              active: true
+            },
+            {
+              text: 'Address',
+              url: '/account/addresses',
+              icon: 'icon-map-marker'
+            }
+          ]
         };
     }
 };
