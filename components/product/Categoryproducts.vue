@@ -7,19 +7,12 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            
-              <div>
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
-              </div>
-              <div>
-              
-                <p>Sold:2790 </p>
+                <p id="sold">Sold:2790 </p>
               </div>
            <!-- <span>BDT 400.99 - 1,019.46</span> <span>2790 Sold</span> -->
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -28,20 +21,12 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
            <!-- <span>BDT 400.99 - 1,019.46</span> <span>2790 Sold</span> -->
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -50,20 +35,12 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
            <!-- <span>BDT 400.99 - 1,019.46</span> <span>2790 Sold</span> -->
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -72,20 +49,12 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
            <!-- <span>BDT 400.99 - 1,019.46</span> <span>2790 Sold</span> -->
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -94,20 +63,13 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
            <!-- <span>BDT 400.99 - 1,019.46</span> <span>2790 Sold</span> -->
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+           
           </div>
         </div>
       </div>
@@ -116,20 +78,12 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
            <!-- <span>BDT 400.99 - 1,019.46</span> <span>2790 Sold</span> -->
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -141,19 +95,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -162,19 +108,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -183,19 +121,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -204,19 +134,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -225,19 +147,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -246,19 +160,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -272,19 +178,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -293,19 +191,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -314,19 +204,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -335,19 +217,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -356,19 +230,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -377,19 +243,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -402,19 +260,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -423,19 +273,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -444,19 +286,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -465,19 +299,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div> 
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -486,19 +312,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -507,19 +325,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -532,19 +342,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -553,19 +355,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -574,19 +368,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -595,19 +381,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -616,19 +394,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -637,19 +407,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/HTB1QvBAXPgy_uJjSZKPq6yGlFXae/CHRLEISURE-Warm-Women-s-Plus-Velvet-Winter-Leggings-Ankle-Length-Keep-Warm-Solid-Pants-High-Waist.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -663,19 +425,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -684,19 +438,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -705,19 +451,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -726,19 +464,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
-              </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div> 
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p id="sold">Sold:2790 </p>
+              </div> 
           </div>
         </div>
       </div>
@@ -747,19 +477,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -768,19 +490,11 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="https://ae01.alicdn.com/kf/H251741f3156549d18aba3a72652d4646H/Pew-Pew-Madafakas-Print-T-shirts-Women-Summer-2020-Graphic-Tees-Funny-Shirts-For-woman-tshirts.jpg_220x220xz.jpg_.webp" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="row">
-              <div class="column" >
-
+              <div class="product-info"> 
                 <p>BDT 400.99</p>
+                <p id="sold">Sold:2790 </p>
               </div>
-              <div class="column" >
-              
-                <p>Sold:2790 </p>
-              </div>
-            </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
@@ -838,5 +552,20 @@ export default {
     width: 18rem;
     margin-bottom: 15px;
 }
+.card-text{
+    margin-bottom: -3px;
+    font-size: 12px;
+}
+.product-info{
+    display: flex;
+}
+.product-info p{
+  font-size: 12px;
+}
+ #sold{
+  font-size: 12px;
+  padding-left: 27px;
+}
+
 
 </style>
