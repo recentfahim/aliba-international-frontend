@@ -4,23 +4,36 @@
         @submit.prevent="handleSubmit"
         v-click-outside="handleClickOutside"
     >
-        <div class="input-group">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="I'm looking for" v-model="searchText">
+        <div class="input-group-append">
+          <input type="file" class="form-control" ref="file" id="file" @change="handleFileUpload()">
+        </div>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary search-button-container" type="submit">
+            <i class="fas fa-search search-button"></i>
+          </button>
+        </div>
+      </div>
+<!--        <div class="input-group">
             <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
             <div class="input-group-append">
                 <span class="input-group-text image-search-container">
                     <i class="fas fa-camera image-search"></i>
+                  <input type="file" class="search-file-input">
                 </span>
-                <span class="input-group-text search-button-container">
+                <button class="input-group-text search-button-container">
                     <i class="fas fa-search search-button"></i>
-                </span>
+                </button>
             </div>
-        </div>
+        </div>-->
     </form>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import ProductResult from '~/components/elements/product/ProductResult';
+import axios from 'axios';
 
 export default {
     name: 'SearchHeader',
@@ -92,7 +105,8 @@ export default {
             ],
             isSearching: false,
             isLoading: false,
-            searchText: ''
+            searchText: '',
+            searchImage: null
         };
     },
     methods: {
@@ -124,10 +138,25 @@ export default {
             this.isSearching = false;
             this.isLoading = false;
         },
+      handleFileUpload(event){
+        this.searchImage = this.$refs.file.files[0];
+        console.log(this.searchImage)
+      },
 
         handleSubmit() {
             if (this.searchText !== null || this.searchText !== '') {
-                this.$router.push(`/search?keyword=${this.searchText}`);
+              const formData = new FormData()
+              formData.append('search_text', this.searchText)
+              axios.post(process.env.baseURL + `search-by-text`, formData).then((response) =>{
+                  console.log(response.data)
+              })
+            }
+            if (this.searchImage !==null){
+              const formData = new FormData()
+              formData.append('search_image', this.searchImage)
+              axios.post(process.env.baseURL + `search-by-image`, formData).then((response) =>{
+                console.log(response.data)
+              })
             }
         }
     }
@@ -155,7 +184,6 @@ export default {
 }
 .search-button-container{
     margin-right: -2px;
-    width: 50px;
     height: 42px;
     background-color: #ff4747;
     border-radius: 0 4px 4px 0;
@@ -178,5 +206,30 @@ export default {
 }
 .image-search-container{
     background-color: #ffffff;
+}
+
+.search-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.search-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.search-file-input:hover::before {
+  border-color: black;
+}
+.search-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 </style>
