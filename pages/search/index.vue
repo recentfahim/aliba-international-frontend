@@ -1,96 +1,71 @@
 <template lang="html">
-    <div class="ps-page--shop" id="shop-sidebar">
-        <bread-crumb :breadcrumb="breadCrumb" />
-        <div class="container">
-            <div class="ps-layout--shop">
-                <div class="ps-layout__left">
-                    <shop-widget
-                        v-if="categories !== null && brands !== null"
-                    />
-                </div>
-
-                <div class="ps-layout__right">
-                    <search-result />
-                </div>
+    <div class="ps-page--shop">
+        <div class="container pt-4 pb-4">
+          <div class="founded-product">
+            <div>
+              <h5>85 Products found</h5>
             </div>
+          </div>
+          <div class="search-product-container">
+            <SearchProductContainer/>
+          </div>
         </div>
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import BreadCrumb from '~/components/elements/BreadCrumb';
-import LayoutShop from '~/components/partials/shop/LayoutShop';
-import SearchResult from '~/components/partials/search/SearchResult';
-import ShopWidget from '~/components/partials/shop/modules/ShopWidget';
+import SearchProductContainer from '~/components/search/SearchProductContainer';
+import axios from 'axios';
 
 export default {
     transition() {
         return 'fadeIn';
     },
+    data() {
+      return {
+        search_keyword: this.$route.query.keyword
+      };
+    },
     components: {
-        ShopWidget,
-        SearchResult,
-        LayoutShop,
-        BreadCrumb
+      SearchProductContainer,
     },
 
     computed: {
-        ...mapState({
-            searchResults: state => state.product.searchResults,
-            collections: state => state.collection.collections,
-            categories: state => state.product.categories,
-            brands: state => state.product.brands
-        }),
         keyword() {
             return this.$route.query.keyword;
         }
     },
 
-    data() {
-        return {
-            breadCrumb: [
-                {
-                    text: 'Home',
-                    url: '/'
-                },
-                {
-                    text: 'Search Result'
-                }
-            ]
-        };
-    },
+
 
     async created() {
-        await this.$store.dispatch('product/getProductByKeyword', {
-            title_contains: this.keyword
-        });
-        const params = {
-            _start: 1,
-            _limit: 12
-        };
-        const collectionsParams = [
-            'shop_best_sale_items',
-            'shop-recommend-items'
-        ];
-        const collections = await this.$store.dispatch(
-            'collection/getCollectionsBySlugs',
-            collectionsParams
-        );
-        const products = await this.$store.dispatch(
-            'product/getProducts',
-            params
-        );
-        const brands = await this.$store.dispatch(
-            'product/getProductBrands',
-            params
-        );
-        const categories = await this.$store.dispatch(
-            'product/getProductCategories',
-            params
-        );
+      var search_key = this.search_keyword
+      if(search_key.endsWith('.png') || search_key.endsWith('.jpg') || search_key.endsWith('.jpeg')){
+        axios.get(process.env.baseURL + `search-by-image?search_key=` + this.search_keyword).then((response) => {
+          console.log(response.data)
+        })
+      }
+        else {
+        axios.get(process.env.baseURL + 'search-by-text?search_key=' + this.search_keyword).then((response) => {
+          console.log(response.data)
+        })
+      }
     }
+
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-page--shop{
+  background-color: $background-color;
+}
+.founded-product{
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+}
+</style>

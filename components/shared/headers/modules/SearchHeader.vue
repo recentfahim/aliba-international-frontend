@@ -144,20 +144,17 @@ export default {
       },
 
         handleSubmit() {
-            if (this.searchText !== null || this.searchText !== '') {
-              const formData = new FormData()
-              formData.append('search_text', this.searchText)
-              axios.post(process.env.baseURL + `search-by-text`, formData).then((response) =>{
-                  console.log(response.data)
-              })
+          if (this.searchImage !==null){
+            const formData = new FormData()
+            formData.append('search_image', this.searchImage)
+            axios.post(process.env.baseURL + `get-search-image-url`, formData).then((response) =>{
+              this.$router.push('/search?keyword=' + response.data.image_url)
+            })
+          }
+          else if (this.searchText !== null || this.searchText !== '') {
+              this.$router.push('/search?keyword=' + this.searchText)
             }
-            if (this.searchImage !==null){
-              const formData = new FormData()
-              formData.append('search_image', this.searchImage)
-              axios.post(process.env.baseURL + `search-by-image`, formData).then((response) =>{
-                console.log(response.data)
-              })
-            }
+
         }
     }
 };
