@@ -1,18 +1,18 @@
 <template>
 <div class="product-grid">
   <div>
-    <div>
-      <img src="https://ae01.alicdn.com/kf/Ha43529c630d44f74bd8d50733e9a9633S/Rc-car-1-12-4WD-update-version-2-4G-radio-remote-control-car-car-toy-car.jpg">
+    <div class="product-image">
+      <img :src="product.image">
     </div>
     <div class="product-des-container">
       <div class="product-title">
-        <p>Original Lenovo XT91 TWS Earphone Wireless Bluetooth Headphones AI Control Gaming Headset Stereo bass With Mic Noise Reduction</p>
+        <p>{{product.title}}</p>
       </div>
       <div class="product-price">
-        <p>BDT 305.56</p>
+        <p>BDT {{ Math.round(product.price)}}</p>
       </div>
       <div class="product-sold">
-        <p>802 sold</p>
+        <p>302 sold</p>
       </div>
     </div>
   </div>
@@ -21,7 +21,8 @@
 
 <script>
 export default {
-name: "SearchProduct"
+name: "SearchProduct",
+  props: ['product']
 }
 </script>
 
@@ -62,5 +63,9 @@ name: "SearchProduct"
 }
 .product-sold{
   margin-top: -15px;
+}
+.product-image img{
+  width: 180px;
+  height: 180px;
 }
 </style>
