@@ -5,15 +5,17 @@
       <img :src="product.image">
     </div>
     <div class="product-des-container">
-      <div class="product-title">
-        <p>{{product.title}}</p>
-      </div>
-      <div class="product-price">
-        <p>BDT {{ Math.round(product.price)}}</p>
-      </div>
-      <div class="product-sold">
-        <p>302 sold</p>
-      </div>
+      <nuxt-link :to="`/product/${product.id}`">
+        <div class="product-title">
+          <p>{{product.title}}</p>
+        </div>
+        <div class="product-price">
+          <p>BDT {{ Math.round(product.price)}}</p>
+        </div>
+        <div class="product-sold">
+          <p>302 sold</p>
+        </div>
+      </nuxt-link>
     </div>
   </div>
 </div>
