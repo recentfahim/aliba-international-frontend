@@ -1,96 +1,83 @@
 <template lang="html">
-    <div class="ps-page--shop" id="shop-sidebar">
-        <bread-crumb :breadcrumb="breadCrumb" />
-        <div class="container">
-            <div class="ps-layout--shop">
-                <div class="ps-layout__left">
-                    <shop-widget
-                        v-if="categories !== null && brands !== null"
-                    />
-                </div>
-
-                <div class="ps-layout__right">
-                    <search-result />
-                </div>
+    <div class="ps-page--shop">
+      <div class="martfury mt-5 mb-5" v-if="pageLoading">
+        <div class="d-flex justify-content-center text-success">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+        <div class="container pt-4 pb-4" v-else>
+          <div class="founded-product">
+            <div v-if="search_text">
+              <span>Looking for <strong>"{{search_text}}"</strong> ({{product_found}} Results)</span>
             </div>
+          </div>
+          <div class="search-product-container">
+            <SearchProductContainer :products="products"/>
+          </div>
         </div>
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import BreadCrumb from '~/components/elements/BreadCrumb';
-import LayoutShop from '~/components/partials/shop/LayoutShop';
-import SearchResult from '~/components/partials/search/SearchResult';
-import ShopWidget from '~/components/partials/shop/modules/ShopWidget';
+import SearchProductContainer from '~/components/search/SearchProductContainer';
+import axios from 'axios';
+import SecondaryPart from '~/components/elements/detail/information/modules/SecondaryPart';
 
 export default {
     transition() {
         return 'fadeIn';
     },
-    components: {
-        ShopWidget,
-        SearchResult,
-        LayoutShop,
-        BreadCrumb
-    },
-
-    computed: {
-        ...mapState({
-            searchResults: state => state.product.searchResults,
-            collections: state => state.collection.collections,
-            categories: state => state.product.categories,
-            brands: state => state.product.brands
-        }),
-        keyword() {
-            return this.$route.query.keyword;
-        }
-    },
-
     data() {
-        return {
-            breadCrumb: [
-                {
-                    text: 'Home',
-                    url: '/'
-                },
-                {
-                    text: 'Search Result'
-                }
-            ]
-        };
+      return {
+        search_keyword: this.$route.query.keyword,
+        products: null,
+        product_found: null,
+        search_text: null,
+        pageLoading: false
+
+      };
+    },
+    components: {
+      SecondaryPart,
+      SearchProductContainer,
     },
 
     async created() {
-        await this.$store.dispatch('product/getProductByKeyword', {
-            title_contains: this.keyword
-        });
-        const params = {
-            _start: 1,
-            _limit: 12
-        };
-        const collectionsParams = [
-            'shop_best_sale_items',
-            'shop-recommend-items'
-        ];
-        const collections = await this.$store.dispatch(
-            'collection/getCollectionsBySlugs',
-            collectionsParams
-        );
-        const products = await this.$store.dispatch(
-            'product/getProducts',
-            params
-        );
-        const brands = await this.$store.dispatch(
-            'product/getProductBrands',
-            params
-        );
-        const categories = await this.$store.dispatch(
-            'product/getProductCategories',
-            params
-        );
+      var search_key = this.search_keyword
+      this.pageLoading = true
+      if(search_key.endsWith('.png') || search_key.endsWith('.jpg') || search_key.endsWith('.jpeg')){
+        axios.get(process.env.baseURL + `search-by-image?search_key=` + this.search_keyword).then((response) => {
+          this.products = response.data.search_products
+          this.product_found = response.data.search_products.length
+          this.pageLoading = false
+        })
+      }
+      else {
+        axios.get(process.env.baseURL + 'search-by-text?search_key=' + this.search_keyword).then((response) => {
+          this.products = response.data.search_products
+          this.product_found = response.data.search_products.length
+          this.search_text = this.search_keyword
+          this.pageLoading = false
+        })
+      }
     }
+
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ps-page--shop{
+  background-color: $background-color;
+}
+.founded-product{
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+}
+</style>
