@@ -9,8 +9,21 @@
       </div>
         <div class="container pt-4 pb-4" v-else>
           <div class="founded-product">
-            <div v-if="search_text">
+            <div v-if="search_text && !is_image_search">
               <span>Looking for <strong>"{{search_text}}"</strong> ({{product_found}} Results)</span>
+            </div>
+            <div v-if="is_image_search">
+              <div>
+                <div>
+                  Looking for
+                </div>
+                <div>
+                  <img :src="search_image_url">
+                </div>
+                <div>
+                  Showing ({{product_found}} Results)
+                </div>
+              </div>
             </div>
           </div>
           <div class="search-product-container">
@@ -36,7 +49,9 @@ export default {
         products: null,
         product_found: null,
         search_text: null,
-        pageLoading: false
+        pageLoading: false,
+        is_image_search: false,
+        search_image_url: null
 
       };
     },
@@ -44,8 +59,8 @@ export default {
       SecondaryPart,
       SearchProductContainer,
     },
-
-    async created() {
+  methods: {
+    dataFetch(){
       var search_key = this.search_keyword
       this.pageLoading = true
       if(search_key.endsWith('.png') || search_key.endsWith('.jpg') || search_key.endsWith('.jpeg')){
@@ -53,6 +68,8 @@ export default {
           this.products = response.data.search_products
           this.product_found = response.data.search_products.length
           this.pageLoading = false
+          this.is_image_search = true
+          this.search_image_url = process.env.imageURL + this.search_keyword
         })
       }
       else {
@@ -61,8 +78,19 @@ export default {
           this.product_found = response.data.search_products.length
           this.search_text = this.search_keyword
           this.pageLoading = false
+          this.is_image_search = false
+
         })
       }
+    }
+  },
+  beforeRouteUpdate(){
+    this.search_keyword = this.$route.query.keyword
+      this.dataFetch()
+  },
+
+    async created() {
+     this.dataFetch();
     }
 
 };

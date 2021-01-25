@@ -80,8 +80,10 @@ export default {
         axios.get(`${process.env.baseURL}single-product/${product_id}`).then((response) => {
             this.product = response.data.data
             this.product_description = response.data.description
-            this.recommend_for_you = response.data.related_product.slice(0, 3);
-            this.similar_product = response.data.related_product.slice(3, 9);
+            if(response.data.related_product) {
+              this.recommend_for_you = response.data.related_product.slice(0, 3);
+              this.similar_product = response.data.related_product.slice(3, 9);
+            }
             this.pageLoading = false
         })
         this.$store.commit('app/setAppDrawer', false);
