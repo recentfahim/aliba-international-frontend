@@ -8,12 +8,15 @@
     </div>
     <div class="category-container" v-else>
         <ul class="category-list">
-            <li class="category-item" v-for="category in categories" @mouseenter="getSubCategory(category.Id)">
+            <li class="category-item" v-for="category in categories">
+              <nuxt-link :to="`/category/${category.Id}`">
                 <div class="d-flex">
                     <div class="category-item-text ml-2">
                         {{ category.Name }}
                     </div>
                 </div>
+              </nuxt-link>
+              <div class="subcategory-tooltip">{{category.Name}}</div>
             </li>
         </ul>
     </div>
@@ -75,5 +78,26 @@ export default {
 .category-container {
     background-color: #ffffff;
     margin-top: -21px;
+}
+.category-item .subcategory-tooltip {
+  visibility: hidden;
+  width: 800px;
+  height: 500px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 96%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.category-item:hover .subcategory-tooltip {
+  visibility: visible;
 }
 </style>
