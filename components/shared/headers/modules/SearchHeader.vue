@@ -140,22 +140,26 @@ export default {
         },
       handleFileUpload(event){
         this.searchImage = this.$refs.file.files[0];
-        console.log(this.searchImage)
+        const formData = new FormData()
+        formData.append('search_image', this.searchImage)
+        axios.post(process.env.baseURL + `get-search-image-url`, formData).then((response) =>{
+          this.$router.push({
+            path: 'search',
+            query: { keyword: response.data.image_url },
+          })
+        })
       },
 
-        handleSubmit() {
-          if (this.searchImage !==null){
-            const formData = new FormData()
-            formData.append('search_image', this.searchImage)
-            axios.post(process.env.baseURL + `get-search-image-url`, formData).then((response) =>{
-              this.$router.push('/search?keyword=' + response.data.image_url)
-            })
+      handleSubmit() {
+        console.log(this.$route.path)
+        if (this.searchText !== null || this.searchText !== '') {
+          this.$router.push({
+            path: 'search',
+            query: { keyword: this.searchText },
+          })
           }
-          else if (this.searchText !== null || this.searchText !== '') {
-              this.$router.push('/search?keyword=' + this.searchText)
-            }
 
-        }
+      }
     }
 };
 </script>

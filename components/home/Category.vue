@@ -9,11 +9,25 @@
     <div class="category-container" v-else>
         <ul class="category-list">
             <li class="category-item" v-for="category in categories" @mouseenter="getSubCategory(category.Id)">
+              <nuxt-link :to="`/category/${category.Id}`">
                 <div class="d-flex">
                     <div class="category-item-text ml-2">
                         {{ category.Name }}
                     </div>
                 </div>
+              </nuxt-link>
+              <div class="subcategory-tooltip">
+                <v-row>
+                  <v-col md="4" v-for="sub_category in sub_categories">
+                    <h6>{{sub_category.Name}}</h6>
+                    <div v-if="sub_category.children" v-for="sub_category_child in sub_category.children">
+                      <nuxt-link :to="`/category/${sub_category_child.Id}`">
+                        <p>{{ sub_category_child.Name }}</p>
+                      </nuxt-link>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
             </li>
         </ul>
     </div>
@@ -35,9 +49,7 @@ export default {
 
     methods: {
       getSubCategory(data){
-          axios.get(process.env.baseURL + `sub-category/`+ data).then((response) => {
-              this.sub_categories = response.data.data
-          })
+        this.sub_categories = this.categories[data].childs
       }
     },
 
@@ -75,5 +87,26 @@ export default {
 .category-container {
     background-color: #ffffff;
     margin-top: -21px;
+}
+.category-item .subcategory-tooltip {
+  visibility: hidden;
+  width: 800px;
+  height: 500px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 96%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.category-item:hover .subcategory-tooltip {
+  visibility: visible;
 }
 </style>

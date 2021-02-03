@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h1 class="product-title-text">{{ product.Title }}</h1>
+    <h1 class="product-title-text" v-html="product.Title"></h1>
     <div class="ps-product__meta mt-4">
       <div class="ps-product__rating">
         <div v-for="product_meta in product.FeaturedValues" v-if="product_meta.Name === 'TotalSales'">

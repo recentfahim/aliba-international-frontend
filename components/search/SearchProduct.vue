@@ -1,50 +1,55 @@
 <template>
-<div class="product-grid">
-  <div>
-    <div class="product-image">
-      <img :src="product.image">
-    </div>
-    <div class="product-des-container">
-      <nuxt-link :to="`/product/${product.id}`">
-        <div class="product-title">
-          <p>{{product.title}}</p>
+  <div class="product-grid">
+    <nuxt-link :to="`/product/${product.id}`">
+      <div>
+        <div class="product-image">
+          <img :src="product.image">
         </div>
-        <div class="product-price">
-          <p>BDT {{ Math.round(product.price)}}</p>
+        <div class="product-des-container">
+
+          <div class="product-title">
+            <p>{{ product.title }}</p>
+          </div>
+          <div class="product-price">
+            <p>BDT {{ Math.round(product.price) }}</p>
+          </div>
+          <div class="product-sold">
+            <p>302 sold</p>
+          </div>
+
         </div>
-        <div class="product-sold">
-          <p>302 sold</p>
-        </div>
-      </nuxt-link>
-    </div>
+      </div>
+    </nuxt-link>
   </div>
-</div>
 </template>
 
 <script>
 export default {
-name: "SearchProduct",
+  name: 'SearchProduct',
   props: ['product']
-}
+};
 </script>
 
 <style scoped>
-.product-grid{
+.product-grid {
   background-color: #ffffff;
   margin-top: 10px;
   border-radius: 8px;
 }
-.product-des-container{
+
+.product-des-container {
   margin: 5px 10px 5px 10px;
   padding-bottom: 1px;
 }
-.product-title{
+
+.product-title {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.product-title p{
+
+.product-title p {
   color: #333;
   vertical-align: middle;
   width: 100%;
@@ -55,18 +60,21 @@ name: "SearchProduct",
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.product-price p{
+
+.product-price p {
   margin-top: 3px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
   color: #000;
-  font-family: Open Sans,Arial,Helvetica,sans-serif,Heiti;
+  font-family: Open Sans, Arial, Helvetica, sans-serif, Heiti;
 }
-.product-sold{
+
+.product-sold {
   margin-top: -15px;
 }
-.product-image img{
+
+.product-image img {
   width: 180px;
   height: 180px;
 }
