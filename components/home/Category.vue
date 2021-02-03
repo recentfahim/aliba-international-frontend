@@ -8,7 +8,7 @@
     </div>
     <div class="category-container" v-else>
         <ul class="category-list">
-            <li class="category-item" v-for="category in categories">
+            <li class="category-item" v-for="category in categories" @mouseenter="getSubCategory(category.Id)">
               <nuxt-link :to="`/category/${category.Id}`">
                 <div class="d-flex">
                     <div class="category-item-text ml-2">
@@ -16,7 +16,18 @@
                     </div>
                 </div>
               </nuxt-link>
-              <div class="subcategory-tooltip">{{category.Name}}</div>
+              <div class="subcategory-tooltip">
+                <v-row>
+                  <v-col md="4" v-for="sub_category in sub_categories">
+                    <h6>{{sub_category.Name}}</h6>
+                    <div v-if="sub_category.children" v-for="sub_category_child in sub_category.children">
+                      <nuxt-link :to="`/category/${sub_category_child.Id}`">
+                        <p>{{ sub_category_child.Name }}</p>
+                      </nuxt-link>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
             </li>
         </ul>
     </div>
@@ -38,9 +49,7 @@ export default {
 
     methods: {
       getSubCategory(data){
-          axios.get(process.env.baseURL + `sub-category/`+ data).then((response) => {
-              this.sub_categories = response.data.data
-          })
+        this.sub_categories = this.categories[data].childs
       }
     },
 
